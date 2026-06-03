@@ -43,23 +43,45 @@ Nguyên liệu thiếu: <liệt kê>
             input_variables=["recipes", "ingredients"]
         )
 
-        self.recipes_data = self._load_recipes_json()
-
-    def _load_recipes_json(self):
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        file_path = os.path.join(base_dir, 'data', 'data.json')
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return f.read()
-        except Exception as e:
-            print(f" Không đọc được data.json: {e}")
+    def _format_recipe_chunks(self, recipe_chunks):
+        if not recipe_chunks:
             return "[]"
+
+        formatted_chunks = []
+        for idx, chunk in enumerate(recipe_chunks, start=1):
+            if isinstance(chunk, str):
+                chunk_text = chunk.strip()
+            elif isinstance(chunk, dict):
+                recipe_name = chunk.get("name") or chunk.get("title") or f"Chunk {idx}"
+                ingredients = chunk.get("ingredients")
+                steps = chunk.get("steps")
+                description = chunk.get("description")
+
+                details = [f"Tên món: {recipe_name}"]
+                if description:
+                    details.append(f"Mô tả: {description}")
+                if ingredients:
+                    details.append(f"Nguyên liệu: {ingredients}")
+                if steps:
+                    details.append(f"Cách làm: {steps}")
+                chunk_text = " | ".join(details)
+            else:
+                chunk_text = str(chunk).strip()
+
+            if chunk_text:
+                formatted_chunks.append(f"{idx}. {chunk_text}")
+
+        if not formatted_chunks:
+            return "[]"
+
+        return "\n".join(formatted_chunks)
 
     def _parse_response(self, text):
         try:
             lines = text.split("\n")
 
             result = {
+                "id": "",
                 "name": "",
                 "description": "",
                 "matched_ingredients": [],
@@ -89,18 +111,29 @@ Nguyên liệu thiếu: <liệt kê>
             print(" Parse lỗi:", e)
             return None
 
-    def get_suggestion(self, detected_ingredients: list) -> dict:
+    def get_suggestion(self, detected_ingredients: list, recipe_chunks: list = None) -> dict:
         if not detected_ingredients:
             print(" Không có nguyên liệu đầu vào")
             return None
+
+        if not recipe_chunks:
+            print(" Thiếu recipe_chunks trong request nên không thể gợi ý món")
+            return {
+                "name": "Chưa có chunk công thức",
+                "description": "Cần gửi recipe_chunks trong request /api/ai/analyze-image để AI gợi ý món.",
+                "matched_ingredients": detected_ingredients,
+                "missing_ingredients": []
+            }
 
         ingredients_str = ", ".join(detected_ingredients)
 
         try:
             print(f" INPUT INGREDIENTS: {ingredients_str}")
 
+            recipes_context = self._format_recipe_chunks(recipe_chunks)
+
             formatted_prompt = self.prompt.format(
-                recipes=self.recipes_data,
+                recipes=recipes_context,
                 ingredients=ingredients_str
             )
 

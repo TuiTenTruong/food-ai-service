@@ -2,6 +2,8 @@ import os
 import cv2
 import numpy as np
 import torch
+import uuid
+from datetime import datetime
 from PIL import Image
 from ultralytics import YOLO
 from torchvision import models, transforms
@@ -12,6 +14,10 @@ class VisionService:
         
         # Đường dẫn tuyệt đối tới thư mục chứa models
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.base_dir = base_dir
+        self.debug_images_dir = os.path.join(self.base_dir, "data", "images")
+        os.makedirs(self.debug_images_dir, exist_ok=True)
+        self.last_annotated_image_path = None
         
         # 1. LOAD YOLOv8
         yolo_path = os.path.join(base_dir, 'models_weights', 'yolo_best.pt') 
@@ -87,6 +93,8 @@ class VisionService:
         }
         
     def predict_image(self, image_bytes):
+        self.last_annotated_image_path = None
+
         # Decode ảnh từ bytes
         nparr = np.frombuffer(image_bytes, np.uint8)
         img_cv2 = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
@@ -98,6 +106,7 @@ class VisionService:
         results = self.yolo_model(img_cv2, conf=0.25)
         detected_ingredients = []
         boxes = results[0].boxes
+        annotated_img = img_cv2.copy()
         
         for box in boxes:
             # Lấy tọa độ bounding box
@@ -131,6 +140,32 @@ class VisionService:
                     "confidence": round(conf_score, 2)
                 })
 
+                label = f"{ingredient_name} {conf_score:.2f}"
+                cv2.rectangle(annotated_img, (x1, y1), (x2, y2), (0, 180, 0), 2)
+                cv2.putText(
+                    annotated_img,
+                    label,
+                    (x1, max(20, y1 - 10)),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.55,
+                    (0, 180, 0),
+                    2,
+                    cv2.LINE_AA,
+                )
+
+        self.last_annotated_image_path = self._save_annotated_image(annotated_img)
+
         # Xóa trùng lặp (nhiều miếng gà thì chỉ tính là 1 loại nguyên liệu "Gà nguyên con")
         unique_items = {item['name']: item for item in detected_ingredients}.values()
         return list(unique_items)
+
+    def _save_annotated_image(self, annotated_img):
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        file_name = f"annotated_{timestamp}_{uuid.uuid4().hex[:8]}.jpg"
+        output_path = os.path.join(self.debug_images_dir, file_name)
+
+        if cv2.imwrite(output_path, annotated_img):
+            relative_path = os.path.relpath(output_path, self.base_dir)
+            return relative_path.replace("\\", "/")
+
+        return None

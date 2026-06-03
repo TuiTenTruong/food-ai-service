@@ -1,5 +1,6 @@
 # Các file môi trường 
 .env
+.venv/
 
 # Các file model nặng
 models_weights/
