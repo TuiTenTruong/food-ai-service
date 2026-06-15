@@ -2,6 +2,16 @@ import os
 import cv2
 import numpy as np
 import torch
+
+# Monkey-patch torch.load cho PyTorch 2.6+ để mặc định weights_only=False,
+# giúp load các file weights YOLO & ResNet một cách mượt mà không bị lỗi unpickle.
+original_torch_load = torch.load
+def patched_torch_load(*args, **kwargs):
+    if 'weights_only' not in kwargs:
+        kwargs['weights_only'] = False
+    return original_torch_load(*args, **kwargs)
+torch.load = patched_torch_load
+
 from PIL import Image
 from ultralytics import YOLO
 from torchvision import models, transforms
@@ -12,9 +22,25 @@ class VisionService:
         
         # Đường dẫn tuyệt đối tới thư mục chứa models
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        
+        parent_dir = os.path.dirname(base_dir)
+
+        # Thử tìm ở D:\NCKH\Code\models trước, sau đó là D:\NCKH\Code\food-ai-service\models_weights
+        yolo_candidates = [
+            os.path.join(parent_dir, 'models', 'yolo_best.pt'),
+            os.path.join(base_dir, 'models_weights', 'yolo_best.pt'),
+        ]
+        resnet_candidates = [
+            os.path.join(parent_dir, 'models', 'resnet_best.pth'),
+            os.path.join(base_dir, 'models_weights', 'resnet_best.pth'),
+        ]
+
+        yolo_path = next((p for p in yolo_candidates if os.path.exists(p)), yolo_candidates[0])
+        resnet_path = next((p for p in resnet_candidates if os.path.exists(p)), resnet_candidates[0])
+
+        print(f" [Vision] Sử dụng YOLO từ: {yolo_path}")
+        print(f" [Vision] Sử dụng ResNet từ: {resnet_path}")
+
         # 1. LOAD YOLOv8
-        yolo_path = os.path.join(base_dir, 'models_weights', 'yolo_best.pt') 
         self.yolo_model = YOLO(yolo_path)
 
         # 2. LOAD RESNET
@@ -29,10 +55,8 @@ class VisionService:
         num_classes = 38 
         self.resnet_model.fc = torch.nn.Linear(num_ftrs, num_classes)
 
-        
-        resnet_path = os.path.join(base_dir, 'models_weights', 'resnet_best.pth')
         # Load weights (ánh xạ tự động sang CPU nếu không có GPU)
-        self.resnet_model.load_state_dict(torch.load(resnet_path, map_location=self.device))
+        self.resnet_model.load_state_dict(torch.load(resnet_path, map_location=self.device, weights_only=False))
         self.resnet_model.to(self.device)
         self.resnet_model.eval()
 
