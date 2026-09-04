@@ -3,7 +3,7 @@ Pydantic Schemas cho RAG Recipe Suggestion API
 Định nghĩa input/output contract giữa backend chính và ai-service
 """
 
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
 
 
@@ -12,7 +12,8 @@ from pydantic import BaseModel, Field
 class IngredientItem(BaseModel):
     """Nguyên liệu của một recipe"""
     name: str = Field(..., description="Tên nguyên liệu")
-    amount: Optional[str] = Field(None, description="Số lượng, ví dụ: '2 quả', '100g'")
+    quantity: str = Field(default="", description="Số lượng, ví dụ: '2', '100'")
+    unit: str = Field(default="", description="Đơn vị, ví dụ: 'quả', 'gram'")
 
 
 class RecipeInput(BaseModel):
@@ -48,6 +49,11 @@ class RecipeSuggestRequest(BaseModel):
         ge=1,
         le=20
     )
+    preferences: Optional[Dict[str, Any]] = Field(
+        None,
+        description="Tùy chọn lọc của người dùng (độ khó, thời gian nấu, chế độ ăn...)"
+    )
+
 
 
 # ============== OUTPUT SCHEMAS ==============

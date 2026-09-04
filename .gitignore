@@ -1,13 +1,20 @@
-# Các file môi trường 
+# Environment variables
 .env
 .venv/
 
-# Các file model nặng
-models_weights/
-*.pth
-*.pt
-
-# Folder rác của Python
+# Python cache & test artifacts
 __pycache__/
 *.pyc
+.pytest_cache/
 
+# Local cache/data
+data/
+
+# Heavy model weights (>50MB, not tracked by git without LFS)
+models_weights/*.pth
+models_weights/rfdetr*
+models_weights/rtdetr*
+models_weights/yolo26*
+
+# User-trained YOLO26 model checkpoint (~6.2MB, safe for GitHub <100MB)
+!models_weights/yolo_best.pt

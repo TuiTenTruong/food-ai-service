@@ -1,0 +1,6796 @@
+[
+  {
+    "id": "recipe-book-0001",
+    "name": "Thịt bò nấu sốt vang",
+    "normalized_name": "thit bo nau sot vang",
+    "description": "Thịt bò chín mềm, nước sốt màu hồng nâu, thơm mùi tỏi và hành tây.",
+    "image_url": "images/thit_bo_nau_sot_vang.jpg",
+    "cook_time_minutes": 18,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn",
+      "Thịt bò"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "1000",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành tây",
+        "normalized_name": "hanh tay",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Rượu vang đỏ",
+        "normalized_name": "ruou vang đo",
+        "quantity": "100",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Bột mì",
+        "normalized_name": "bot mi",
+        "quantity": "1",
+        "unit": "muỗng xúp",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Tẩm ướp",
+        "description": "Thịt bò thái vuông 3-4cm, ướp với muối, tiêu và rượu vang trong 60 phút.",
+        "tip": "Nên dùng thịt thăn để món ăn mềm ngon."
+      },
+      {
+        "step_number": 2,
+        "title": "Xào nấu",
+        "description": "Phi thơm hành tỏi với mỡ, cho bò vào xào săn rồi thêm cà chua băm nhỏ vào đun cùng.",
+        "tip": null
+      },
+      {
+        "step_number": 3,
+        "title": "Hầm chín",
+        "description": "Cho nước dùng vào hầm nhỏ lửa đến khi thịt bò chín nhừ, nước xốt sánh lại nhờ bột mỳ.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Tẩm ướp** - Thịt bò thái vuông 3-4cm, ướp với muối, tiêu và rượu vang trong 60 phút. (Mẹo: Nên dùng thịt thăn để món ăn mềm ngon.)\nBước 2: **Xào nấu** - Phi thơm hành tỏi với mỡ, cho bò vào xào săn rồi thêm cà chua băm nhỏ vào đun cùng.\nBước 3: **Hầm chín** - Cho nước dùng vào hầm nhỏ lửa đến khi thịt bò chín nhừ, nước xốt sánh lại nhờ bột mỳ.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 103"
+  },
+  {
+    "id": "recipe-book-0002",
+    "name": "Cơm gà (Đùi gà hấp)",
+    "normalized_name": "com ga (đui ga hap)",
+    "description": "Đùi gà được hấp cách thủy để giữ nguyên vị ngọt tự nhiên, ăn kèm rau củ.",
+    "image_url": "images/com_ga_dui_ga_hap.jpg",
+    "cook_time_minutes": 30,
+    "difficulty": "medium",
+    "servings": 1,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chính"
+    ],
+    "ingredients": [
+      {
+        "name": "Đùi gà",
+        "normalized_name": "đui ga",
+        "quantity": "1",
+        "unit": "cái",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Bắp cải",
+        "normalized_name": "bap cai",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "1",
+        "unit": "củ",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Hấp gà",
+        "description": "Đùi gà khía mặt, hấp cách thủy cùng gừng đập dập đến khi chín mọng.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Trộn rau",
+        "description": "Bắp cải xắt ngắn, cà rốt thái mỏng, trộn cùng nước mắm chua ngọt và gừng.",
+        "tip": "Để rau trong tủ lạnh 2 giờ trước khi dùng sẽ ngon hơn."
+      }
+    ],
+    "steps_text": "Bước 1: **Hấp gà** - Đùi gà khía mặt, hấp cách thủy cùng gừng đập dập đến khi chín mọng.\nBước 2: **Trộn rau** - Bắp cải xắt ngắn, cà rốt thái mỏng, trộn cùng nước mắm chua ngọt và gừng. (Mẹo: Để rau trong tủ lạnh 2 giờ trước khi dùng sẽ ngon hơn.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 203"
+  },
+  {
+    "id": "recipe-book-0003",
+    "name": "Thịt lợn kho tiêu",
+    "normalized_name": "thit lon kho tieu",
+    "description": "Món mặn truyền thống với nước kho sánh đặc, cay nồng đậm đà.",
+    "image_url": "images/thit_lon_kho_tieu.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước hàng",
+        "normalized_name": "nuoc hang",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Tẩm ướp",
+        "description": "Thịt thái miếng vừa ăn, ướp nước mắm, đường, tiêu và nước hàng trong 40 phút.",
+        "tip": "Đợi đường tan hoàn toàn thành nước sền sệt."
+      },
+      {
+        "step_number": 2,
+        "title": "Kho thịt",
+        "description": "Phi thơm tỏi, cho thịt vào kho lửa nhỏ, đảo nhẹ đến khi nước quánh lại và rắc nhiều tiêu.",
+        "tip": "Không thêm nước khi kho tiêu."
+      }
+    ],
+    "steps_text": "Bước 1: **Tẩm ướp** - Thịt thái miếng vừa ăn, ướp nước mắm, đường, tiêu và nước hàng trong 40 phút. (Mẹo: Đợi đường tan hoàn toàn thành nước sền sệt.)\nBước 2: **Kho thịt** - Phi thơm tỏi, cho thịt vào kho lửa nhỏ, đảo nhẹ đến khi nước quánh lại và rắc nhiều tiêu. (Mẹo: Không thêm nước khi kho tiêu.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 21"
+  },
+  {
+    "id": "recipe-book-0004",
+    "name": "Canh mây cà chua",
+    "normalized_name": "canh may ca chua",
+    "description": "Món canh rực rỡ sắc đỏ của cà chua và sợi trứng gà vàng óng như mây.",
+    "image_url": "images/canh_may_ca_chua.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "3",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "2",
+        "unit": "muỗng xúp",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Phi thơm hành, xào cà chua mềm với muối tiêu đường rồi thêm nước đun sôi. Chế từ từ trứng đã đánh tan vào và quấy nhẹ tay.",
+        "tip": "Quấy nhanh tay để trứng tạo sợi mỏng như mây."
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Phi thơm hành, xào cà chua mềm với muối tiêu đường rồi thêm nước đun sôi. Chế từ từ trứng đã đánh tan vào và quấy nhẹ tay. (Mẹo: Quấy nhanh tay để trứng tạo sợi mỏng như mây.)",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 121"
+  },
+  {
+    "id": "recipe-book-0005",
+    "name": "Canh mướp hương nấu tôm",
+    "normalized_name": "canh muop huong nau tom",
+    "description": "Vị ngọt thanh khiết từ mướp hương hòa quyện cùng tôm tươi.",
+    "image_url": "images/canh_muop_huong_nau_tom.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 3,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Mướp hương",
+        "normalized_name": "muop huong",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Đun sôi nước, cho tôm vào nấu chín rồi thả mướp thái vát vào nấu sôi bùng trở lại. Nêm mắm muối mì chính.",
+        "tip": "Mướp và tôm chín tới giữ được độ ngọt và giòn."
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Đun sôi nước, cho tôm vào nấu chín rồi thả mướp thái vát vào nấu sôi bùng trở lại. Nêm mắm muối mì chính. (Mẹo: Mướp và tôm chín tới giữ được độ ngọt và giòn.)",
+    "source": "555 món ăn Việt Nam, trang 36"
+  },
+  {
+    "id": "recipe-book-0006",
+    "name": "Su su xào tỏi phi",
+    "normalized_name": "su su xao toi phi",
+    "description": "Món xào giữ được độ xanh giòn của su su và mùi thơm lừng của tỏi phi.",
+    "image_url": "images/su_su_xao_toi_phi.jpg",
+    "cook_time_minutes": 8,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Su su",
+        "normalized_name": "su su",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào nhanh",
+        "description": "Phi thơm tỏi với mỡ nóng, đổ su su đã thái chỉ vào xào trên lửa lớn. Nêm gia vị vừa ăn.",
+        "tip": "Xào lửa thật lớn để su su giữ màu xanh và không ra nước."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào nhanh** - Phi thơm tỏi với mỡ nóng, đổ su su đã thái chỉ vào xào trên lửa lớn. Nêm gia vị vừa ăn. (Mẹo: Xào lửa thật lớn để su su giữ màu xanh và không ra nước.)",
+    "source": "555 món ăn Việt Nam, trang 33"
+  },
+  {
+    "id": "recipe-book-0007",
+    "name": "Đậu bắp luộc",
+    "normalized_name": "đau bap luoc",
+    "description": "Món ăn thanh đạm, giữ nguyên màu xanh và vị ngọt của đậu bắp.",
+    "image_url": "images/dau_bap_luoc.jpg",
+    "cook_time_minutes": 5,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món luộc"
+    ],
+    "ingredients": [
+      {
+        "name": "Đậu bắp",
+        "normalized_name": "đau bap",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Luộc",
+        "description": "Thả đậu bắp vào nước sôi có pha ít muối, luộc chín giòn trong 5 phút.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Luộc** - Thả đậu bắp vào nước sôi có pha ít muối, luộc chín giòn trong 5 phút.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 10"
+  },
+  {
+    "id": "recipe-book-0008",
+    "name": "Trứng gà cuộn tôm thịt",
+    "normalized_name": "trung ga cuon tom thit",
+    "description": "Lớp trứng vàng bao bọc nhân tôm thịt dai ngọt, hấp chín thơm ngon.",
+    "image_url": "images/trung_ga_cuon_tom_thit.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "medium",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "4",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "160",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "80",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm nhân",
+        "description": "Tôm bóc vỏ băm nhỏ, trộn cùng thịt lợn băm, hành lá và gia vị.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Cuộn và hấp",
+        "description": "Trứng gà tráng mỏng, cho nhân vào giữa cuộn tròn lại rồi đem hấp chín trong 20 phút.",
+        "tip": "Khi chín cắt thành từng khoanh tròn bày ra đĩa."
+      }
+    ],
+    "steps_text": "Bước 1: **Làm nhân** - Tôm bóc vỏ băm nhỏ, trộn cùng thịt lợn băm, hành lá và gia vị.\nBước 2: **Cuộn và hấp** - Trứng gà tráng mỏng, cho nhân vào giữa cuộn tròn lại rồi đem hấp chín trong 20 phút. (Mẹo: Khi chín cắt thành từng khoanh tròn bày ra đĩa.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 53"
+  },
+  {
+    "id": "recipe-book-0009",
+    "name": "Bầu dục xào bông cải xanh",
+    "normalized_name": "bau duc xao bong cai xanh",
+    "description": "Món xào bổ dưỡng với bông cải xanh giòn và bầu dục lợn mềm thơm.",
+    "image_url": "images/bau_duc_xao_bong_cai_xanh.jpg",
+    "cook_time_minutes": 30,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Bông cải xanh",
+        "normalized_name": "bong cai xanh",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (bầu dục)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành tây",
+        "normalized_name": "hanh tay",
+        "quantity": "250",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Ướp bầu dục",
+        "description": "Bầu dục thái miếng, ướp gừng và gia vị trong 30 phút cho thấm.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Xào chín",
+        "description": "Xào bầu dục chín vàng tái rồi trút các loại rau củ vào đảo trên lửa lớn cho chín giòn.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Ướp bầu dục** - Bầu dục thái miếng, ướp gừng và gia vị trong 30 phút cho thấm.\nBước 2: **Xào chín** - Xào bầu dục chín vàng tái rồi trút các loại rau củ vào đảo trên lửa lớn cho chín giòn.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 93"
+  },
+  {
+    "id": "recipe-book-0010",
+    "name": "Bắp cải luộc chấm trứng gà",
+    "normalized_name": "bap cai luoc cham trung ga",
+    "description": "Món luộc thanh đạm giữ nguyên vị ngọt tự nhiên của rau bắp cải.",
+    "image_url": "images/bap_cai_luoc_cham_trung_ga.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món luộc"
+    ],
+    "ingredients": [
+      {
+        "name": "Bắp cải",
+        "normalized_name": "bap cai",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Luộc",
+        "description": "Luộc bắp cải và trứng trong nước sôi có ít muối trong 10 phút đến khi chín kỹ.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Luộc** - Luộc bắp cải và trứng trong nước sôi có ít muối trong 10 phút đến khi chín kỹ.",
+    "source": "Phổ biến trong ẩm thực Việt"
+  },
+  {
+    "id": "recipe-book-0011",
+    "name": "Canh hẹ nấu đậu phụ trắng",
+    "normalized_name": "canh he nau đau phu trang",
+    "description": "Món canh thanh mát với đậu phụ mềm và hẹ xanh tốt cho sức khỏe.",
+    "image_url": "images/canh_he_nau_dau_phu_trang.jpg",
+    "cook_time_minutes": 5,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh",
+      "Thanh nhiệt"
+    ],
+    "ingredients": [
+      {
+        "name": "Đậu phụ",
+        "normalized_name": "đau phu",
+        "quantity": "2",
+        "unit": "miếng",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "10",
+        "unit": "gram (hẹ)",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Đun sôi nước, cho đậu phụ vào nấu 5 phút rồi thêm hẹ cho sôi bùng là tắt bếp.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Đun sôi nước, cho đậu phụ vào nấu 5 phút rồi thêm hẹ cho sôi bùng là tắt bếp.",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 89"
+  },
+  {
+    "id": "recipe-book-0012",
+    "name": "Thịt bò xào ớt Đà Lạt",
+    "normalized_name": "thit bo xao ot đa lat",
+    "description": "Thịt bò thăn mềm xào cùng ớt chuông giòn ngọt và cà chua.",
+    "image_url": "images/thit_bo_xao_ot_da_lat.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Ớt chuông",
+        "normalized_name": "ot chuong",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "1",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Thịt bò thái mỏng, ướp tỏi và nước mắm. Rau củ thái vừa ăn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Xào nấu",
+        "description": "Phi thơm tỏi với mỡ, xào bò tái rồi cho ớt và cà chua vào đảo nhanh tay.",
+        "tip": "Xào lửa lớn để giữ độ giòn của ớt."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Thịt bò thái mỏng, ướp tỏi và nước mắm. Rau củ thái vừa ăn.\nBước 2: **Xào nấu** - Phi thơm tỏi với mỡ, xào bò tái rồi cho ớt và cà chua vào đảo nhanh tay. (Mẹo: Xào lửa lớn để giữ độ giòn của ớt.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 98"
+  },
+  {
+    "id": "recipe-book-0013",
+    "name": "Bầu xào tôm thịt",
+    "normalized_name": "bau xao tom thit",
+    "description": "Bầu thanh mát kết hợp cùng tôm tươi và thịt lợn nạc vai.",
+    "image_url": "images/bau_xao_tom_thit.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Bí đao",
+        "normalized_name": "bi đao",
+        "quantity": "500",
+        "unit": "gram (bầu)",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "1",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Bầu thái mỏng. Thịt lợn thái mỏng ướp mắm hành. Tôm bóc vỏ ướp tiêu.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Xào chín",
+        "description": "Xào tôm thịt săn để riêng. Xào bầu với lửa thật lớn, nêm gia vị rồi trút tôm thịt vào đảo đều.",
+        "tip": "Thành phẩm ráo nước, bầu chín tới giữ màu xanh."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Bầu thái mỏng. Thịt lợn thái mỏng ướp mắm hành. Tôm bóc vỏ ướp tiêu.\nBước 2: **Xào chín** - Xào tôm thịt săn để riêng. Xào bầu với lửa thật lớn, nêm gia vị rồi trút tôm thịt vào đảo đều. (Mẹo: Thành phẩm ráo nước, bầu chín tới giữ màu xanh.)",
+    "source": "555 món ăn Việt Nam, trang 37"
+  },
+  {
+    "id": "recipe-book-0014",
+    "name": "Canh sườn khoai tây cà rốt",
+    "normalized_name": "canh suon khoai tay ca rot",
+    "description": "Nước canh ngọt từ sườn lợn, khoai tây bùi và cà rốt chín nhừ.",
+    "image_url": "images/canh_suon_khoai_tay_ca_rot.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (sườn)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Khoai tây",
+        "normalized_name": "khoai tay",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Ninh sườn với muối cho mềm, hớt bọt. Cho khoai tây và cà rốt vào nấu chín nhừ, nêm lại mắm mì chính.",
+        "tip": "Hớt bọt thường xuyên để nước canh được trong."
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Ninh sườn với muối cho mềm, hớt bọt. Cho khoai tây và cà rốt vào nấu chín nhừ, nêm lại mắm mì chính. (Mẹo: Hớt bọt thường xuyên để nước canh được trong.)",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 119"
+  },
+  {
+    "id": "recipe-book-0015",
+    "name": "Trứng vịt nhồi thịt",
+    "normalized_name": "trung vit nhoi thit",
+    "description": "Trứng vịt luộc nhồi thịt lợn băm, rán vàng rồi rim xốt cà chua.",
+    "image_url": "images/trung_vit_nhoi_thit.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 3,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng vịt",
+        "normalized_name": "trung vit",
+        "quantity": "6",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "220",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "15",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nhồi nhân",
+        "description": "Trứng luộc bổ đôi, lấy lòng đỏ trộn thịt lợn, mắm, tiêu rồi nhồi lại vào lòng trắng.",
+        "tip": "Phết chút bột mì lên mặt thịt để khi rán không bị bong."
+      },
+      {
+        "step_number": 2,
+        "title": "Rán và sốt",
+        "description": "Rán vàng mặt thịt trứng, sau đó rim cùng xốt cà chua và tỏi phi.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nhồi nhân** - Trứng luộc bổ đôi, lấy lòng đỏ trộn thịt lợn, mắm, tiêu rồi nhồi lại vào lòng trắng. (Mẹo: Phết chút bột mì lên mặt thịt để khi rán không bị bong.)\nBước 2: **Rán và sốt** - Rán vàng mặt thịt trứng, sau đó rim cùng xốt cà chua và tỏi phi.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 54"
+  },
+  {
+    "id": "recipe-book-0016",
+    "name": "Ngô xào tôm",
+    "normalized_name": "ngo xao tom",
+    "description": "Vị ngọt của ngô non hòa quyện cùng vị đậm đà của tôm khô và hành lá.",
+    "image_url": "images/ngo_xao_tom.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Ngô",
+        "normalized_name": "ngo",
+        "quantity": "2",
+        "unit": "bắp",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "2",
+        "unit": "muỗng xúp",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chuẩn bị",
+        "description": "Ngô tách hạt hấp chín. Tôm khô ngâm mềm để ráo.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Xào",
+        "description": "Phi thơm hành, xào tôm và ngô với đường muối cho thấm vị.",
+        "tip": "Xào lửa vừa để hạt ngô không bị khô cứng."
+      }
+    ],
+    "steps_text": "Bước 1: **Chuẩn bị** - Ngô tách hạt hấp chín. Tôm khô ngâm mềm để ráo.\nBước 2: **Xào** - Phi thơm hành, xào tôm và ngô với đường muối cho thấm vị. (Mẹo: Xào lửa vừa để hạt ngô không bị khô cứng.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 77"
+  },
+  {
+    "id": "recipe-book-0017",
+    "name": "Canh bí đao nấu tôm thịt",
+    "normalized_name": "canh bi đao nau tom thit",
+    "description": "Món canh giải nhiệt ngọt mát với tôm tươi và thịt lợn nạc.",
+    "image_url": "images/canh_bi_dao_nau_tom_thit.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Bí đao",
+        "normalized_name": "bi đao",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Tôm và thịt lợn băm nhỏ, trộn cùng hành khô và gia vị.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Nấu canh",
+        "description": "Đun sôi nước, xắn tôm thịt thành viên thả vào, sau đó cho bí đao vào nấu chín trong.",
+        "tip": "Hớt bọt thường xuyên để nước canh được trong xanh."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Tôm và thịt lợn băm nhỏ, trộn cùng hành khô và gia vị.\nBước 2: **Nấu canh** - Đun sôi nước, xắn tôm thịt thành viên thả vào, sau đó cho bí đao vào nấu chín trong. (Mẹo: Hớt bọt thường xuyên để nước canh được trong xanh.)",
+    "source": "555 món ăn Việt Nam, trang 41"
+  },
+  {
+    "id": "recipe-book-0018",
+    "name": "Gà rang gừng",
+    "normalized_name": "ga rang gung",
+    "description": "Thịt gà săn chắc, thơm nồng mùi gừng tươi và nước mắm đậm đà.",
+    "image_url": "images/ga_rang_gung.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Rang gà lửa lớn cho săn rồi hạ nhỏ lửa, đun cùng gừng và gia vị đến khi cạn nước.",
+        "tip": "Gà rang săn, không chảy nước là đạt yêu cầu."
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Rang gà lửa lớn cho săn rồi hạ nhỏ lửa, đun cùng gừng và gia vị đến khi cạn nước. (Mẹo: Gà rang săn, không chảy nước là đạt yêu cầu.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 19"
+  },
+  {
+    "id": "recipe-book-0019",
+    "name": "Bông cải xanh xào thịt bò",
+    "normalized_name": "bong cai xanh xao thit bo",
+    "description": "Bông cải xanh giòn và thịt bò mềm đậm đà vị tỏi phi.",
+    "image_url": "images/bong_cai_xanh_xao_thit_bo.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Bông cải xanh",
+        "normalized_name": "bong cai xanh",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Xào bò tái để riêng. Xào bông cải chín tới rồi đổ bò vào đảo nhanh tay cùng gia vị.",
+        "tip": "Thịt bò mềm và trắng, không bị dai là đạt."
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Xào bò tái để riêng. Xào bông cải chín tới rồi đổ bò vào đảo nhanh tay cùng gia vị. (Mẹo: Thịt bò mềm và trắng, không bị dai là đạt.)",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 158"
+  },
+  {
+    "id": "recipe-book-0020",
+    "name": "Cà tím nướng mỡ hành",
+    "normalized_name": "ca tim nuong mo hanh",
+    "description": "Cà tím nướng thơm mùi khói quyện cùng mỡ hành tỏi béo ngậy.",
+    "image_url": "images/ca_tim_nuong_mo_hanh.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món nướng"
+    ],
+    "ingredients": [
+      {
+        "name": "Cà tím",
+        "normalized_name": "ca tim",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nướng cà",
+        "description": "Nướng cà tím trên than hồng cho chín mềm, lột bỏ vỏ.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hoàn thiện",
+        "description": "Rưới mỡ hành tỏi phi và nước mắm chua ngọt lên trên cà tím.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nướng cà** - Nướng cà tím trên than hồng cho chín mềm, lột bỏ vỏ.\nBước 2: **Hoàn thiện** - Rưới mỡ hành tỏi phi và nước mắm chua ngọt lên trên cà tím.",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 163"
+  },
+  {
+    "id": "recipe-book-0021",
+    "name": "Thịt lợn rang hành hoa",
+    "normalized_name": "thit lon rang hanh hoa",
+    "description": "Thịt lợn nạc rang cháy cạnh thơm lừng mùi hành lá và tiêu.",
+    "image_url": "images/thit_lon_rang_hanh_hoa.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rang thịt",
+        "description": "Xào thịt săn với mỡ, nêm mắm tiêu rồi cho hành lá vào đảo nhanh tay.",
+        "tip": "Thịt có màu vàng nhạt, vị đậm đà là ngon."
+      }
+    ],
+    "steps_text": "Bước 1: **Rang thịt** - Xào thịt săn với mỡ, nêm mắm tiêu rồi cho hành lá vào đảo nhanh tay. (Mẹo: Thịt có màu vàng nhạt, vị đậm đà là ngon.)",
+    "source": "555 món ăn Việt Nam, trang 188"
+  },
+  {
+    "id": "recipe-book-0022",
+    "name": "Bí xanh xào tỏi",
+    "normalized_name": "bi xanh xao toi",
+    "description": "Bí đao giòn ngọt thơm mùi tỏi phi, đĩa xào khô ráo.",
+    "image_url": "images/bi_xanh_xao_toi.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Bí đao",
+        "normalized_name": "bi đao",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào",
+        "description": "Phi thơm tỏi, xào bí lửa lớn cho chín tới, nêm mắm và mì chính.",
+        "tip": "Xào nhanh tay để bí không bị nát."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào** - Phi thơm tỏi, xào bí lửa lớn cho chín tới, nêm mắm và mì chính. (Mẹo: Xào nhanh tay để bí không bị nát.)",
+    "source": "555 món ăn Việt Nam, trang 41"
+  },
+  {
+    "id": "recipe-book-0023",
+    "name": "Mướp xào thịt bò",
+    "normalized_name": "muop xao thit bo",
+    "description": "Mướp xanh tươi xào cùng thịt bò mềm thơm mùi tỏi phi.",
+    "image_url": "images/muop_xao_thit_bo.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Mướp hương",
+        "normalized_name": "muop huong",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào nhanh",
+        "description": "Phi tỏi xào bò và mướp lửa lớn cho chín tới, nêm mắm tiêu.",
+        "tip": "Mướp không ra nước, thịt bò mềm là đạt yêu cầu."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào nhanh** - Phi tỏi xào bò và mướp lửa lớn cho chín tới, nêm mắm tiêu. (Mẹo: Mướp không ra nước, thịt bò mềm là đạt yêu cầu.)",
+    "source": "555 món ăn Việt Nam, trang 187"
+  },
+  {
+    "id": "recipe-book-0024",
+    "name": "Canh bắp cải thịt lợn",
+    "normalized_name": "canh bap cai thit lon",
+    "description": "Vị ngọt tự nhiên từ rau bắp cải và thịt lợn nạc băm.",
+    "image_url": "images/canh_bap_cai_thit_lon.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Bắp cải",
+        "normalized_name": "bap cai",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Nấu thịt lợn chín rồi cho bắp cải vào nấu mềm, nêm gia vị vừa ăn.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Nấu thịt lợn chín rồi cho bắp cải vào nấu mềm, nêm gia vị vừa ăn.",
+    "source": "555 món ăn Việt Nam, trang 29"
+  },
+  {
+    "id": "recipe-book-0025",
+    "name": "Củ cải trắng kho thịt",
+    "normalized_name": "cu cai trang kho thit",
+    "description": "Thịt lợn đậm đà thấm vị ngọt thanh của củ cải trắng.",
+    "image_url": "images/cu_cai_trang_kho_thit.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món kho"
+    ],
+    "ingredients": [
+      {
+        "name": "Củ cải",
+        "normalized_name": "cu cai",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Kho thịt",
+        "description": "Kho thịt lợn cùng củ cải trắng và gia vị đến khi nước sánh lại.",
+        "tip": "Thịt chắc, củ cải mềm là ngon."
+      }
+    ],
+    "steps_text": "Bước 1: **Kho thịt** - Kho thịt lợn cùng củ cải trắng và gia vị đến khi nước sánh lại. (Mẹo: Thịt chắc, củ cải mềm là ngon.)",
+    "source": "555 món ăn Việt Nam, trang 84"
+  },
+  {
+    "id": "recipe-book-0026",
+    "name": "Bí đỏ xào tôm",
+    "normalized_name": "bi đo xao tom",
+    "description": "Bí đỏ bùi dẻo xào cùng tôm tươi và hành lá thơm nức.",
+    "image_url": "images/bi_do_xao_tom.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Bí đỏ",
+        "normalized_name": "bi đo",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào",
+        "description": "Xào tôm chín, cho bí đỏ vào xào cùng hành lá đến khi bí mềm.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Xào** - Xào tôm chín, cho bí đỏ vào xào cùng hành lá đến khi bí mềm.",
+    "source": "555 món ăn Việt Nam, trang 42"
+  },
+  {
+    "id": "recipe-book-0027",
+    "name": "Nộm mướp đắng cà rốt",
+    "normalized_name": "nom muop đang ca rot",
+    "description": "Vị đắng thanh của khổ qua quyện cùng vị ngọt bùi của khoai lang và cà rốt.",
+    "image_url": "images/nom_muop_dang_ca_rot.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món nộm"
+    ],
+    "ingredients": [
+      {
+        "name": "Mướp đắng",
+        "normalized_name": "muop đang",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "1",
+        "unit": "củ",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Khoai lang",
+        "normalized_name": "khoai lang",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Mướp đắng thái lát mỏng ngâm muối. Khoai lang thái sợi hấp chín.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Trộn nộm",
+        "description": "Trộn mướp đắng, cà rốt, khoai lang với nước mắm tỏi ớt.",
+        "tip": "Để 10 phút cho thấm gia vị trước khi ăn."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Mướp đắng thái lát mỏng ngâm muối. Khoai lang thái sợi hấp chín.\nBước 2: **Trộn nộm** - Trộn mướp đắng, cà rốt, khoai lang với nước mắm tỏi ớt. (Mẹo: Để 10 phút cho thấm gia vị trước khi ăn.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 177"
+  },
+  {
+    "id": "recipe-book-0028",
+    "name": "Canh bí đỏ nấu tôm",
+    "normalized_name": "canh bi đo nau tom",
+    "description": "Nước canh ngọt lịm từ tôm tươi và bí đỏ dẻo bùi.",
+    "image_url": "images/canh_bi_do_nau_tom.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Bí đỏ",
+        "normalized_name": "bi đo",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Nấu tôm chín rồi cho bí đỏ thái miếng vào hầm mềm.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Nấu tôm chín rồi cho bí đỏ thái miếng vào hầm mềm.",
+    "source": "Phổ biến trong ẩm thực Việt"
+  },
+  {
+    "id": "recipe-book-0029",
+    "name": "Su su xào tôm",
+    "normalized_name": "su su xao tom",
+    "description": "Món xào thanh đạm với su su giòn và vị ngọt từ tôm tươi.",
+    "image_url": "images/su_su_xao_tom.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Su su",
+        "normalized_name": "su su",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Xào tôm chín rồi cho su su thái sợi vào đảo nhanh trên lửa lớn.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Xào tôm chín rồi cho su su thái sợi vào đảo nhanh trên lửa lớn.",
+    "source": "Phổ biến trong ẩm thực Việt"
+  },
+  {
+    "id": "recipe-book-0030",
+    "name": "Canh cải nấu thăn lợn trứng gà",
+    "normalized_name": "canh cai nau than lon trung ga",
+    "description": "Nước canh trong, vị ngọt từ thịt thăn và màu vàng đẹp mắt của trứng.",
+    "image_url": "images/canh_cai_nau_than_lon_trung_ga.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "150",
+        "unit": "gram (thịt thăn)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Đun sôi nước với gừng và thịt lợn thái mỏng, cho rau vào nấu chín.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Thêm trứng",
+        "description": "Đập trứng vào bát múc canh đổ lên trên rắc hành hoa.",
+        "tip": "Không đánh tan trứng để giữ màu vàng đẹp."
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Đun sôi nước với gừng và thịt lợn thái mỏng, cho rau vào nấu chín.\nBước 2: **Thêm trứng** - Đập trứng vào bát múc canh đổ lên trên rắc hành hoa. (Mẹo: Không đánh tan trứng để giữ màu vàng đẹp.)",
+    "source": "555 món ăn Việt Nam, trang 28"
+  },
+  {
+    "id": "recipe-book-0031",
+    "name": "Củ cải hấp thịt lợn",
+    "normalized_name": "cu cai hap thit lon",
+    "description": "Củ cải trắng mềm mượt cuộn thịt băm, ngọt thanh tự nhiên.",
+    "image_url": "images/cu_cai_hap_thit_lon.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Củ cải",
+        "normalized_name": "cu cai",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "300",
+        "unit": "gram (nạc vai)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Cuộn thịt",
+        "description": "Thịt lợn băm trộn tỏi nhồi vào giữa lát củ cải mỏng rồi cuộn lại.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp chín",
+        "description": "Xếp củ cải cuộn thịt vào đĩa rồi đem hấp cách thủy đến khi chín mềm.",
+        "tip": "Thịt chắc, củ cải trong là đạt."
+      }
+    ],
+    "steps_text": "Bước 1: **Cuộn thịt** - Thịt lợn băm trộn tỏi nhồi vào giữa lát củ cải mỏng rồi cuộn lại.\nBước 2: **Hấp chín** - Xếp củ cải cuộn thịt vào đĩa rồi đem hấp cách thủy đến khi chín mềm. (Mẹo: Thịt chắc, củ cải trong là đạt.)",
+    "source": "555 món ăn Việt Nam, trang 35"
+  },
+  {
+    "id": "recipe-book-0032",
+    "name": "Bí xanh nấu thịt viên",
+    "normalized_name": "bi xanh nau thit vien",
+    "description": "Thịt băm viên tròn ngọt đậm đà trong khoanh bí xanh mát.",
+    "image_url": "images/bi_xanh_nau_thit_vien.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Bí đao",
+        "normalized_name": "bi đao",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "150",
+        "unit": "gram (nạc dăm)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm viên thịt",
+        "description": "Bí đao cắt khoanh nhồi thịt băm đã trộn gia vị vào giữa.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Nấu canh",
+        "description": "Thả bí nhồi thịt vào nấu trong nước sôi đến khi chín mềm.",
+        "tip": "Hớt bọt thường xuyên để nước canh được trong."
+      }
+    ],
+    "steps_text": "Bước 1: **Làm viên thịt** - Bí đao cắt khoanh nhồi thịt băm đã trộn gia vị vào giữa.\nBước 2: **Nấu canh** - Thả bí nhồi thịt vào nấu trong nước sôi đến khi chín mềm. (Mẹo: Hớt bọt thường xuyên để nước canh được trong.)",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 117"
+  },
+  {
+    "id": "recipe-book-0033",
+    "name": "Dưa sắn (Củ đậu muối)",
+    "normalized_name": "dua san (cu đau muoi)",
+    "description": "Món dưa muối giòn sần sật, thơm và chua dịu từ củ đậu và tỏi ớt.",
+    "image_url": "images/dua_san_cu_dau_muoi.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món muối"
+    ],
+    "ingredients": [
+      {
+        "name": "Củ đậu",
+        "normalized_name": "cu đau",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Giấm",
+        "normalized_name": "giam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Phơi héo",
+        "description": "Củ đậu và cà rốt thái miếng rồi đem phơi héo để tạo độ giòn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Muối dưa",
+        "description": "Ngâm rau củ vào hỗn hợp giấm đường nước mắm 3-4 ngày.",
+        "tip": "Dưa vàng đều là ngon."
+      }
+    ],
+    "steps_text": "Bước 1: **Phơi héo** - Củ đậu và cà rốt thái miếng rồi đem phơi héo để tạo độ giòn.\nBước 2: **Muối dưa** - Ngâm rau củ vào hỗn hợp giấm đường nước mắm 3-4 ngày. (Mẹo: Dưa vàng đều là ngon.)",
+    "source": "555 món ăn Việt Nam, trang 54"
+  },
+  {
+    "id": "recipe-book-0034",
+    "name": "Cơm gà xào sả ớt",
+    "normalized_name": "com ga xao sa ot",
+    "description": "Đùi gà xào cay nồng với sả, ớt và tỏi phi thơm.",
+    "image_url": "images/com_ga_xao_sa_ot.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chính"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "500",
+        "unit": "gram (đùi)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào gà",
+        "description": "Xào gà săn với sả tỏi và ớt cho đến khi chín vàng đậm đà.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Xào gà** - Xào gà săn với sả tỏi và ớt cho đến khi chín vàng đậm đà.",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 51"
+  },
+  {
+    "id": "recipe-book-0035",
+    "name": "Súp lơ trắng xào tôm",
+    "normalized_name": "sup lo trang xao tom",
+    "description": "Súp lơ giòn ngọt xào cùng tôm tươi hồng hào bắt mắt.",
+    "image_url": "images/sup_lo_trang_xao_tom.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Súp lơ",
+        "normalized_name": "sup lo",
+        "quantity": "300",
+        "unit": "gram (trắng)",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Xào tôm chín rồi cho súp lơ trắng vào đảo cùng với gia vị.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Xào tôm chín rồi cho súp lơ trắng vào đảo cùng với gia vị.",
+    "source": "555 món ăn Việt Nam, trang 93"
+  },
+  {
+    "id": "recipe-book-0036",
+    "name": "Cà tím xào tỏi",
+    "normalized_name": "ca tim xao toi",
+    "description": "Cà tím mềm mượt, thấm đẫm vị tỏi phi vàng thơm.",
+    "image_url": "images/ca_tim_xao_toi.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Cà tím",
+        "normalized_name": "ca tim",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Phi tỏi thơm rồi xào cà tím đến khi mềm và thấm gia vị.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Phi tỏi thơm rồi xào cà tím đến khi mềm và thấm gia vị.",
+    "source": "555 món ăn Việt Nam, trang 49"
+  },
+  {
+    "id": "recipe-book-0037",
+    "name": "Trứng rán hành hoa",
+    "normalized_name": "trung ran hanh hoa",
+    "description": "Món ăn quốc dân nhanh gọn, thơm mùi hành lá tơi xốp.",
+    "image_url": "images/trung_ran_hanh_hoa.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "3",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rán trứng",
+        "description": "Đánh tan trứng với hành lá và gia vị rồi rán vàng hai mặt.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Rán trứng** - Đánh tan trứng với hành lá và gia vị rồi rán vàng hai mặt.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 52"
+  },
+  {
+    "id": "recipe-book-0038",
+    "name": "Thịt bò xào su su",
+    "normalized_name": "thit bo xao su su",
+    "description": "Thịt bò thăn mềm ngọt xào cùng su su xanh giòn.",
+    "image_url": "images/thit_bo_xao_su_su.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Su su",
+        "normalized_name": "su su",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào",
+        "description": "Xào bò tái để riêng, sau đó xào su su chín rồi trút bò vào đảo cùng.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Xào** - Xào bò tái để riêng, sau đó xào su su chín rồi trút bò vào đảo cùng.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 99"
+  },
+  {
+    "id": "recipe-book-0039",
+    "name": "Gà hấp trứng",
+    "normalized_name": "ga hap trung",
+    "description": "Thịt gà nhồi nhân hạt sen, nấm và hấp cùng lớp trứng vàng óng.",
+    "image_url": "images/ga_hap_trung.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "hard",
+    "servings": 6,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "1400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "6",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "25",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm nhân",
+        "description": "Gà rút xương, nhồi nhân gồm thịt gà băm, hạt sen và nấm vào bụng gà.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp chín",
+        "description": "Cuộn trứng bên ngoài da gà rồi đem hấp cách thủy cho đến khi chín.",
+        "tip": "Cắt khoanh tròn để lộ lớp nhân đẹp mắt."
+      }
+    ],
+    "steps_text": "Bước 1: **Làm nhân** - Gà rút xương, nhồi nhân gồm thịt gà băm, hạt sen và nấm vào bụng gà.\nBước 2: **Hấp chín** - Cuộn trứng bên ngoài da gà rồi đem hấp cách thủy cho đến khi chín. (Mẹo: Cắt khoanh tròn để lộ lớp nhân đẹp mắt.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 15"
+  },
+  {
+    "id": "recipe-book-0040",
+    "name": "Sườn xào chua ngọt",
+    "normalized_name": "suon xao chua ngot",
+    "description": "Sườn heo rán vàng kết hợp xốt cà chua và hành tây chua ngọt.",
+    "image_url": "images/suon_xao_chua_ngot.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "400",
+        "unit": "gram (sườn)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành tây",
+        "normalized_name": "hanh tay",
+        "quantity": "1",
+        "unit": "củ",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "50",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Giấm",
+        "normalized_name": "giam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chiên sườn",
+        "description": "Sườn luộc mềm, nhúng bột rồi chiên vàng đều.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Làm xốt",
+        "description": "Xào cà chua, hành tây cho mềm rồi trút sườn vào rim cùng giấm đường.",
+        "tip": "Xốt sánh mịn bao quanh sườn là đạt."
+      }
+    ],
+    "steps_text": "Bước 1: **Chiên sườn** - Sườn luộc mềm, nhúng bột rồi chiên vàng đều.\nBước 2: **Làm xốt** - Xào cà chua, hành tây cho mềm rồi trút sườn vào rim cùng giấm đường. (Mẹo: Xốt sánh mịn bao quanh sườn là đạt.)",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 33"
+  },
+  {
+    "id": "recipe-book-0041",
+    "name": "Khoai tây xào thịt bò",
+    "normalized_name": "khoai tay xao thit bo",
+    "description": "Thịt bò thăn mềm xào cùng khoai tây giòn và hành lá.",
+    "image_url": "images/khoai_tay_xao_thit_bo.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Khoai tây",
+        "normalized_name": "khoai tay",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Khoai tây thái sợi chiên sơ. Xào bò tái rồi cho khoai vào đảo cùng tỏi phi.",
+        "tip": "Khoai tây không được gãy nát."
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Khoai tây thái sợi chiên sơ. Xào bò tái rồi cho khoai vào đảo cùng tỏi phi. (Mẹo: Khoai tây không được gãy nát.)",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 177"
+  },
+  {
+    "id": "recipe-book-0042",
+    "name": "Thịt lợn kho nước dừa",
+    "normalized_name": "thit lon kho nuoc dua",
+    "description": "Thịt ba chỉ kho béo ngậy với nước dừa tươi ngọt lịm.",
+    "image_url": "images/thit_lon_kho_nuoc_dua.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món kho"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "1000",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "40",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước hàng",
+        "normalized_name": "nuoc hang",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Kho thịt",
+        "description": "Ướp thịt rồi kho cùng nước dừa tươi cho đến khi cạn nước và thịt mềm rục.",
+        "tip": "Thịt có màu cánh gián nhạt, vị ngọt thanh."
+      }
+    ],
+    "steps_text": "Bước 1: **Kho thịt** - Ướp thịt rồi kho cùng nước dừa tươi cho đến khi cạn nước và thịt mềm rục. (Mẹo: Thịt có màu cánh gián nhạt, vị ngọt thanh.)",
+    "source": "555 món ăn Việt Nam, trang 183"
+  },
+  {
+    "id": "recipe-book-0043",
+    "name": "Canh bí đao nấu cánh gà",
+    "normalized_name": "canh bi đao nau canh ga",
+    "description": "Nước canh ngọt thanh khiết từ cánh gà và bí xanh.",
+    "image_url": "images/canh_bi_dao_nau_canh_ga.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Cánh gà",
+        "normalized_name": "canh ga",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Bí đao",
+        "normalized_name": "bi đao",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Ninh cánh gà với gừng rồi cho bí đao vào nấu chín tới.",
+        "tip": "Hớt bọt để nước trong."
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Ninh cánh gà với gừng rồi cho bí đao vào nấu chín tới. (Mẹo: Hớt bọt để nước trong.)",
+    "source": "555 món ăn Việt Nam, trang 41"
+  },
+  {
+    "id": "recipe-book-0044",
+    "name": "Gà nấu khoai tây",
+    "normalized_name": "ga nau khoai tay",
+    "description": "Thịt gà chín mềm hầm cùng khoai tây bùi và cà chua đỏ mọng.",
+    "image_url": "images/ga_nau_khoai_tay.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hầm"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Khoai tây",
+        "normalized_name": "khoai tay",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "60",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Hầm chín",
+        "description": "Xào gà săn rồi hầm cùng khoai tây và cà chua đến khi mềm nhừ.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Hầm chín** - Xào gà săn rồi hầm cùng khoai tây và cà chua đến khi mềm nhừ.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 11"
+  },
+  {
+    "id": "recipe-book-0045",
+    "name": "Nộm dưa chuột cà rốt",
+    "normalized_name": "nom dua chuot ca rot",
+    "description": "Món khai vị giòn mát, chua ngọt hài hòa từ tôm thịt và rau củ.",
+    "image_url": "images/nom_dua_chuot_ca_rot.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món nộm"
+    ],
+    "ingredients": [
+      {
+        "name": "Dưa chuột",
+        "normalized_name": "dua chuot",
+        "quantity": "1000",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Giấm",
+        "normalized_name": "giam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Trộn nộm",
+        "description": "Trộn rau củ thái chỉ với tôm thịt và nước mắm chua ngọt.",
+        "tip": "Dưa phải ráo nước hoàn toàn."
+      }
+    ],
+    "steps_text": "Bước 1: **Trộn nộm** - Trộn rau củ thái chỉ với tôm thịt và nước mắm chua ngọt. (Mẹo: Dưa phải ráo nước hoàn toàn.)",
+    "source": "555 món ăn Việt Nam, trang 45"
+  },
+  {
+    "id": "recipe-book-0046",
+    "name": "Thịt lợn rang",
+    "normalized_name": "thit lon rang",
+    "description": "Thịt ba chỉ rang cháy cạnh thơm lừng mùi hành và hạt tiêu.",
+    "image_url": "images/thit_lon_rang.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "700",
+        "unit": "gram (ba chỉ)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rang thịt",
+        "description": "Cho thịt vào mỡ nóng rang săn, nêm gia vị rồi cho hành lá vào sau cùng.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Rang thịt** - Cho thịt vào mỡ nóng rang săn, nêm gia vị rồi cho hành lá vào sau cùng.",
+    "source": "555 món ăn Việt Nam, trang 188"
+  },
+  {
+    "id": "recipe-book-0047",
+    "name": "Rau cải xoong nấu thịt nạc",
+    "normalized_name": "rau cai xoong nau thit nac",
+    "description": "Canh thanh đạm với rau cải xoong và thịt lợn thái mỏng.",
+    "image_url": "images/rau_cai_xoong_nau_thit_nac.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Nấu thịt lợn với gừng rồi cho rau cải vào nấu chín nhanh trên lửa lớn.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Nấu thịt lợn với gừng rồi cho rau cải vào nấu chín nhanh trên lửa lớn.",
+    "source": "555 món ăn Việt Nam, trang 27"
+  },
+  {
+    "id": "recipe-book-0048",
+    "name": "Bắp cải nhồi thịt hấp",
+    "normalized_name": "bap cai nhoi thit hap",
+    "description": "Lá bắp cải cuộn nhân thịt băm mộc nhĩ, hấp chín thơm mùi hạt tiêu.",
+    "image_url": "images/bap_cai_nhoi_thit_hap.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Bắp cải",
+        "normalized_name": "bap cai",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "150",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Gói bắp cải",
+        "description": "Nhồi nhân thịt vào lá bắp cải rồi cuộn tròn lại.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp chín",
+        "description": "Rán vàng cạnh cuộn bắp cải rồi đem hấp cách thủy đến khi chín.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Gói bắp cải** - Nhồi nhân thịt vào lá bắp cải rồi cuộn tròn lại.\nBước 2: **Hấp chín** - Rán vàng cạnh cuộn bắp cải rồi đem hấp cách thủy đến khi chín.",
+    "source": "555 món ăn Việt Nam, trang 30"
+  },
+  {
+    "id": "recipe-book-0049",
+    "name": "Nộm bắp cải gà",
+    "normalized_name": "nom bap cai ga",
+    "description": "Món nộm giòn mát, vị chua cay mặn ngọt hài hòa, thơm mùi rau răm.",
+    "image_url": "images/nom_bap_cai_ga.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món nộm"
+    ],
+    "ingredients": [
+      {
+        "name": "Bắp cải",
+        "normalized_name": "bap cai",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Giấm",
+        "normalized_name": "giam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Bắp cải thái chỉ, rửa sạch để ráo. Thịt gà luộc chín xé nhỏ.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Trộn nộm",
+        "description": "Pha nước mắm dấm đường tỏi ớt, trộn đều với bắp cải và gà, để 20 phút cho ngấm.",
+        "tip": "Vắt bớt nước trước khi bày ra đĩa."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Bắp cải thái chỉ, rửa sạch để ráo. Thịt gà luộc chín xé nhỏ.\nBước 2: **Trộn nộm** - Pha nước mắm dấm đường tỏi ớt, trộn đều với bắp cải và gà, để 20 phút cho ngấm. (Mẹo: Vắt bớt nước trước khi bày ra đĩa.)",
+    "source": "555 món ăn Việt Nam, trang 31"
+  },
+  {
+    "id": "recipe-book-0050",
+    "name": "Trứng rán nguyên quả",
+    "normalized_name": "trung ran nguyen qua",
+    "description": "Trứng gà rán chín tới, lòng trắng giòn, lòng đỏ béo bùi.",
+    "image_url": "images/trung_ran_nguyen_qua.jpg",
+    "cook_time_minutes": 5,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "4",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "40",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "1",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rán trứng",
+        "description": "Đun mỡ nóng già, đập trứng trực tiếp vào chảo, rắc muối tiêu lên trên mặt.",
+        "tip": "Rán đến khi lòng trắng chín hoàn toàn thì lật mặt."
+      }
+    ],
+    "steps_text": "Bước 1: **Rán trứng** - Đun mỡ nóng già, đập trứng trực tiếp vào chảo, rắc muối tiêu lên trên mặt. (Mẹo: Rán đến khi lòng trắng chín hoàn toàn thì lật mặt.)",
+    "source": "555 món ăn Việt Nam, trang 322"
+  },
+  {
+    "id": "recipe-book-0051",
+    "name": "Mọc tôm hấp",
+    "normalized_name": "moc tom hap",
+    "description": "Viên tôm thịt dai ngọt, thơm mùi hành khô và tiêu trắng.",
+    "image_url": "images/moc_tom_hap.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "200",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Giã nhân",
+        "description": "Tôm bóc vỏ, thịt lợn thái mỏng, đem giã nhuyễn cùng hành khô và gia vị.",
+        "tip": "Quết kỹ để mọc có độ dai tự nhiên."
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp chín",
+        "description": "Viên mọc thành từng viên nhỏ, xếp vào đĩa rồi đem hấp cách thủy 20 phút.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Giã nhân** - Tôm bóc vỏ, thịt lợn thái mỏng, đem giã nhuyễn cùng hành khô và gia vị. (Mẹo: Quết kỹ để mọc có độ dai tự nhiên.)\nBước 2: **Hấp chín** - Viên mọc thành từng viên nhỏ, xếp vào đĩa rồi đem hấp cách thủy 20 phút.",
+    "source": "555 món ăn Việt Nam, trang 118"
+  },
+  {
+    "id": "recipe-book-0052",
+    "name": "Tôm bao bột trứng rán",
+    "normalized_name": "tom bao bot trung ran",
+    "description": "Tôm tươi lăn qua lớp bột trứng chiên vàng giòn, thơm nức tỏi phi.",
+    "image_url": "images/tom_bao_bot_trung_ran.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chiên"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "1",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "15",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "80",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Tẩm bột",
+        "description": "Tôm làm sạch, nhúng qua trứng đánh tan rồi lăn qua bột mì.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Chiên vàng",
+        "description": "Đun mỡ nóng già, cho tôm vào chiên vàng đều hai mặt cùng tỏi băm.",
+        "tip": "Ăn nóng kèm nước chấm chua ngọt."
+      }
+    ],
+    "steps_text": "Bước 1: **Tẩm bột** - Tôm làm sạch, nhúng qua trứng đánh tan rồi lăn qua bột mì.\nBước 2: **Chiên vàng** - Đun mỡ nóng già, cho tôm vào chiên vàng đều hai mặt cùng tỏi băm. (Mẹo: Ăn nóng kèm nước chấm chua ngọt.)",
+    "source": "555 món ăn Việt Nam, trang 121"
+  },
+  {
+    "id": "recipe-book-0053",
+    "name": "Thịt lợn nấu đông",
+    "normalized_name": "thit lon nau đong",
+    "description": "Thịt lợn chín nhừ, nước đông trong suốt, vị đậm đà thơm mùi tiêu.",
+    "image_url": "images/thit_lon_nau_dong.jpg",
+    "cook_time_minutes": 60,
+    "difficulty": "medium",
+    "servings": 6,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "1000",
+        "unit": "gram (chân giò)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "300",
+        "unit": "gram (bì)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Ninh thịt",
+        "description": "Thịt lợn và bì thái miếng vửa ăn, nêm mắm muối rồi ninh nhỏ lửa cho đến khi chín nhừ.",
+        "tip": "Hớt bọt thường xuyên để nước đông được trong."
+      },
+      {
+        "step_number": 2,
+        "title": "Đổ khuôn",
+        "description": "Múc thịt ra bát, rắc nhiều tiêu lên trên rồi để vào ngăn mát tủ lạnh cho đông lại.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Ninh thịt** - Thịt lợn và bì thái miếng vửa ăn, nêm mắm muối rồi ninh nhỏ lửa cho đến khi chín nhừ. (Mẹo: Hớt bọt thường xuyên để nước đông được trong.)\nBước 2: **Đổ khuôn** - Múc thịt ra bát, rắc nhiều tiêu lên trên rồi để vào ngăn mát tủ lạnh cho đông lại.",
+    "source": "555 món ăn Việt Nam, trang 185"
+  },
+  {
+    "id": "recipe-book-0054",
+    "name": "Thịt lợn viên tuyết hoa",
+    "normalized_name": "thit lon vien tuyet hoa",
+    "description": "Viên thịt lợn mïìm mượt, bao phủ lớp bánh mì vụn trắng tinh như tuyết.",
+    "image_url": "images/thit_lon_vien_tuyet_hoa.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chiên"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "1000",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "1",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm viên thịt",
+        "description": "Thịt lợn băm trộn hành, đường, tiêu, lòng đỏ trứng rồi viên tròn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Chiên vàng",
+        "description": "Lăn viên thịt qua bánh mì băm nhỏ rồi chiên vàng trong mỡ nóng.",
+        "tip": "Viên thịt tròn đẹp, không bị vỡ là đạt yêu cầu."
+      }
+    ],
+    "steps_text": "Bước 1: **Làm viên thịt** - Thịt lợn băm trộn hành, đường, tiêu, lòng đỏ trứng rồi viên tròn.\nBước 2: **Chiên vàng** - Lăn viên thịt qua bánh mì băm nhỏ rồi chiên vàng trong mỡ nóng. (Mẹo: Viên thịt tròn đẹp, không bị vỡ là đạt yêu cầu.)",
+    "source": "555 món ăn Việt Nam, trang 191"
+  },
+  {
+    "id": "recipe-book-0055",
+    "name": "Gà luộc gừng chanh",
+    "normalized_name": "ga luoc gung chanh",
+    "description": "Gà chín tới, da vàng bóng, thịt ngọt thơm mùi gừng tươi.",
+    "image_url": "images/ga_luoc_gung_chanh.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món luộc"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "1",
+        "unit": "con",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Luộc gà",
+        "description": "Cho gà vào nồi nước lạnh cùng gừng đập dập, đun sôi rồi vặn nhỏ lửa trong 15-20 phút.",
+        "tip": "Dùng đũa châm vào đùi gà thấy nước trong chảy ra là chín."
+      }
+    ],
+    "steps_text": "Bước 1: **Luộc gà** - Cho gà vào nồi nước lạnh cùng gừng đập dập, đun sôi rồi vặn nhỏ lửa trong 15-20 phút. (Mẹo: Dùng đũa châm vào đùi gà thấy nước trong chảy ra là chín.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 9"
+  },
+  {
+    "id": "recipe-book-0056",
+    "name": "Thịt bò kho gừng",
+    "normalized_name": "thit bo kho gung",
+    "description": "Thịt bò săn chắc, thơm nồng vị gừng và đậm đà nước mắm.",
+    "image_url": "images/thit_bo_kho_gung.jpg",
+    "cook_time_minutes": 40,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món kho"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "1000",
+        "unit": "gram (bắp)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước hàng",
+        "normalized_name": "nuoc hang",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Kho thịt",
+        "description": "Thịt bò thái miếng vuông, ướp gia vị rồi kho cùng gừng thái sợi trên lửa nhỏ cho đến khi thịt mềm.",
+        "tip": "Thịt thấm vị gừng, màu vàng nâu đẹp mắt."
+      }
+    ],
+    "steps_text": "Bước 1: **Kho thịt** - Thịt bò thái miếng vuông, ướp gia vị rồi kho cùng gừng thái sợi trên lửa nhỏ cho đến khi thịt mềm. (Mẹo: Thịt thấm vị gừng, màu vàng nâu đẹp mắt.)",
+    "source": "555 món ăn Việt Nam, trang 230"
+  },
+  {
+    "id": "recipe-book-0057",
+    "name": "Nộm su su tôm thịt",
+    "normalized_name": "nom su su tom thit",
+    "description": "Su su và cà rốt giòn ngọt quyện cùng vị ngọt của tôm tươi.",
+    "image_url": "images/nom_su_su_tom_thit.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món nộm"
+    ],
+    "ingredients": [
+      {
+        "name": "Su su",
+        "normalized_name": "su su",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Trộn nộm",
+        "description": "Su su, cà rốt thái sợi bóp muối. Trộn cùng tôm thịt luộc và nước mắm tỏi ớt chua ngọt.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Trộn nộm** - Su su, cà rốt thái sợi bóp muối. Trộn cùng tôm thịt luộc và nước mắm tỏi ớt chua ngọt.",
+    "source": "555 món ăn Việt Nam, trang 34"
+  },
+  {
+    "id": "recipe-book-0058",
+    "name": "Mướp đắng hầm thịt lợn",
+    "normalized_name": "muop đang ham thit lon",
+    "description": "Vị đắng thanh của mướp hòa quyện cùng nhân thịt băm đậm đà.",
+    "image_url": "images/muop_dang_ham_thit_lon.jpg",
+    "cook_time_minutes": 30,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Mướp đắng",
+        "normalized_name": "muop đang",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Hầm chín",
+        "description": "Mướp đắng nhồi nhân thịt băm, thả vào nước sôi hầm nhỏ lửa đến khi mïìm.",
+        "tip": "Hớt bọt để nước canh được trong."
+      }
+    ],
+    "steps_text": "Bước 1: **Hầm chín** - Mướp đắng nhồi nhân thịt băm, thả vào nước sôi hầm nhỏ lửa đến khi mïìm. (Mẹo: Hớt bọt để nước canh được trong.)",
+    "source": "555 món ăn Việt Nam, trang 38"
+  },
+  {
+    "id": "recipe-book-0059",
+    "name": "Cà chua nhồi thịt lợn hấp",
+    "normalized_name": "ca chua nhoi thit lon hap",
+    "description": "Cà chua đỏ sẫm, vị chua ngọt, nhân thịt chắc thơm mùi tiêu.",
+    "image_url": "images/ca_chua_nhoi_thit_lon_hap.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Hấp chín",
+        "description": "Nhồi nhân thịt vào cà chua rồi đem hấp cách thủy cho đến khi chín.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Hấp chín** - Nhồi nhân thịt vào cà chua rồi đem hấp cách thủy cho đến khi chín.",
+    "source": "555 món ăn Việt Nam, trang 48"
+  },
+  {
+    "id": "recipe-book-0060",
+    "name": "Đậu phụ hấp trứng gà",
+    "normalized_name": "đau phu hap trung ga",
+    "description": "Món ăn mïìm mượt, béo ngậy, màu sắc vàng xanh bắt mắt.",
+    "image_url": "images/dau_phu_hap_trung_ga.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Đậu phụ",
+        "normalized_name": "đau phu",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Hấp chín",
+        "description": "Bóp nát đậu phụ trộn trứng và hành lá rồi đem hấp cách thủy 15 phút.",
+        "tip": "Trứng phân bố đều, xốp là đạt."
+      }
+    ],
+    "steps_text": "Bước 1: **Hấp chín** - Bóp nát đậu phụ trộn trứng và hành lá rồi đem hấp cách thủy 15 phút. (Mẹo: Trứng phân bố đều, xốp là đạt.)",
+    "source": "555 món ăn Việt Nam, trang 60"
+  },
+  {
+    "id": "recipe-book-0061",
+    "name": "Tôm rim mặn ngọt",
+    "normalized_name": "tom rim man ngot",
+    "description": "Tôm sùn chắc, màu đỏ hồng, thấm vị mặn ngọt đậm đà.",
+    "image_url": "images/tom_rim_man_ngot.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rim tôm",
+        "description": "Xào tôm với tỏi phi, nêm mắm đường rim lửa nhỏ cho đến khi nước cạn và tôm săn lại.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Rim tôm** - Xào tôm với tỏi phi, nêm mắm đường rim lửa nhỏ cho đến khi nước cạn và tôm săn lại.",
+    "source": "555 món ăn Việt Nam, trang 120"
+  },
+  {
+    "id": "recipe-book-0062",
+    "name": "Bắp cải xào tỏi phi",
+    "normalized_name": "bap cai xao toi phi",
+    "description": "Bắp cải giòn ngọt, thơm lừng mùi tỏi phi vàng.",
+    "image_url": "images/bap_cai_xao_toi_phi.jpg",
+    "cook_time_minutes": 8,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Bắp cải",
+        "normalized_name": "bap cai",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào",
+        "description": "Phi thơm tỏi với mỡ nóng, trút bắp cải vào xào nhanh tay trên lửa lớn.",
+        "tip": "Xào nhanh để giữ độ giòn và màu xanh."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào** - Phi thơm tỏi với mỡ nóng, trút bắp cải vào xào nhanh tay trên lửa lớn. (Mẹo: Xào nhanh để giữ độ giòn và màu xanh.)",
+    "source": "555 món ăn Việt Nam, trang 26"
+  },
+  {
+    "id": "recipe-book-0063",
+    "name": "Khổ qua xào trứng vịt",
+    "normalized_name": "kho qua xao trung vit",
+    "description": "Món xào dân dã, khổ qua chín tái giòn, quyện trứng vịt béo bùi.",
+    "image_url": "images/kho_qua_xao_trung_vit.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Mướp đắng",
+        "normalized_name": "muop đang",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Trứng vịt",
+        "normalized_name": "trung vit",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào nhanh",
+        "description": "Xào mướp đắng trên lửa lớn, rưới trứng vịt đã đánh tan vào đảo đều cho đến khi khô ráo.",
+        "tip": "Đĩa xào không được có nước."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào nhanh** - Xào mướp đắng trên lửa lớn, rưới trứng vịt đã đánh tan vào đảo đều cho đến khi khô ráo. (Mẹo: Đĩa xào không được có nước.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 199"
+  },
+  {
+    "id": "recipe-book-0064",
+    "name": "Sườn heo rim mặn",
+    "normalized_name": "suon heo rim man",
+    "description": "Sườn non mïìm ngọt, thấm đẫm gia vị mặn mặn ngọt ngọt.",
+    "image_url": "images/suon_heo_rim_man.jpg",
+    "cook_time_minutes": 30,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (sườn)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rim sườn",
+        "description": "Sườn chặt miếng nhỏ, chiên vàng rồi rim cùng nước mắm đường cho đến khi nước sền sệt.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Rim sườn** - Sườn chặt miếng nhỏ, chiên vàng rồi rim cùng nước mắm đường cho đến khi nước sền sệt.",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 8"
+  },
+  {
+    "id": "recipe-book-0065",
+    "name": "Bông cải xanh nấu tôm tươi",
+    "normalized_name": "bong cai xanh nau tom tuoi",
+    "description": "Món canh ngọt thanh mát từ tôm tươi và súp lơ xanh.",
+    "image_url": "images/bong_cai_xanh_nau_tom_tuoi.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Bông cải xanh",
+        "normalized_name": "bong cai xanh",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Đun sôi nước, cho tôm vào nấu chín rồi thả bông cải vào đun sôi bùng là được.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Đun sôi nước, cho tôm vào nấu chín rồi thả bông cải vào đun sôi bùng là được.",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 146"
+  },
+  {
+    "id": "recipe-book-0066",
+    "name": "Trứng rán nấm rơm",
+    "normalized_name": "trung ran nam rom",
+    "description": "Trứng rán vàng rụm xen lẫn vị ngọt dai của nấm rơm trắng sạch.",
+    "image_url": "images/trung_ran_nam_rom.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng vịt",
+        "normalized_name": "trung vit",
+        "quantity": "4",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Rán trứng",
+        "description": "Xào nấm chín tới rồi đổ hỗn hợp trứng hành vào chiên vàng 2 mặt.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Rán trứng** - Xào nấm chín tới rồi đổ hỗn hợp trứng hành vào chiên vàng 2 mặt.",
+    "source": "Nấu ăn Gia Đình Miền Nam, trang 29"
+  },
+  {
+    "id": "recipe-book-0067",
+    "name": "Trứng vịt kho mặn",
+    "normalized_name": "trung vit kho man",
+    "description": "Trứng vịt có màu vàng đỏ cánh gián, ngấm gia vị mặn ngọt đậm đà.",
+    "image_url": "images/trung_vit_kho_man.jpg",
+    "cook_time_minutes": 30,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng vịt",
+        "normalized_name": "trung vit",
+        "quantity": "10",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Trứng luộc chín, bóc vỏ sạch.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Kho trứng",
+        "description": "Thắng 1/2 lượng đường làm nước hàng. Cho trứng vào nồi cùng nước hàng, nước mắm, muối và đường còn lại. Kho nhỏ lửa cho đến khi nước sánh lại.",
+        "tip": "Trứng ngấm gia vị, không bị vỡ nát là đạt."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Trứng luộc chín, bóc vỏ sạch.\nBước 2: **Kho trứng** - Thắng 1/2 lượng đường làm nước hàng. Cho trứng vào nồi cùng nước hàng, nước mắm, muối và đường còn lại. Kho nhỏ lửa cho đến khi nước sánh lại. (Mẹo: Trứng ngấm gia vị, không bị vỡ nát là đạt.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 55"
+  },
+  {
+    "id": "recipe-book-0068",
+    "name": "Tôm hùm luộc",
+    "normalized_name": "tom hum luoc",
+    "description": "Tôm hùm luộc giữ trọn vị ngọt tự nhiên, thơm mùi chanh và hành tây.",
+    "image_url": "images/tom_hum_luoc.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "1",
+        "unit": "con (500g)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành tây",
+        "normalized_name": "hanh tay",
+        "quantity": "1",
+        "unit": "cuả",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chuẩn bị",
+        "description": "Nấu nước với chanh, hành tây, gừng và muối cho sôi.",
+        "tip": "Giữ nguyên râu và càng để tôm không mất nước ngọt."
+      },
+      {
+        "step_number": 2,
+        "title": "Luộc tôm",
+        "description": "Thả tôm vào nước sôi luộc trong 20 phút cho thịt chín đều.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chuẩn bị** - Nấu nước với chanh, hành tây, gừng và muối cho sôi. (Mẹo: Giữ nguyên râu và càng để tôm không mất nước ngọt.)\nBước 2: **Luộc tôm** - Thả tôm vào nước sôi luộc trong 20 phút cho thịt chín đều.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 93"
+  },
+  {
+    "id": "recipe-book-0069",
+    "name": "Đậu phụ ngũ vị",
+    "normalized_name": "đau phu ngu vi",
+    "description": "Đậu phụ tráng lớp bột ngũ vị giòn thơm, béo ngậy.",
+    "image_url": "images/dau_phu_ngu_vi.jpg",
+    "cook_time_minutes": 20,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Đậu phụ",
+        "normalized_name": "đau phu",
+        "quantity": "400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Bột mì",
+        "normalized_name": "bot mi",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "50",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Tẩm bột",
+        "description": "Trộn bột mì, ngũ vị hương, tỏi và muối. Nhuáng đậu phụ đã thái miếng vào hỗn hợp.",
+        "tip": "Nên nhẹ tay tránh làm vỡ đậu phụ."
+      },
+      {
+        "step_number": 2,
+        "title": "Rán vàng",
+        "description": "Chiên đậu trong dầu nóng già cho đến khi vàng đều.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Tẩm bột** - Trộn bột mì, ngũ vị hương, tỏi và muối. Nhuáng đậu phụ đã thái miếng vào hỗn hợp. (Mẹo: Nên nhẹ tay tránh làm vỡ đậu phụ.)\nBước 2: **Rán vàng** - Chiên đậu trong dầu nóng già cho đến khi vàng đều.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 186"
+  },
+  {
+    "id": "recipe-book-0070",
+    "name": "Thịt bò ngũ vị",
+    "normalized_name": "thit bo ngu vi",
+    "description": "Thịt bắp bò hầm chín mềm, thấm đẫm hương vị của các loại thảo mộc ngũ vị.",
+    "image_url": "images/thit_bo_ngu_vi.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "500",
+        "unit": "gram (bắp)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt nêm",
+        "normalized_name": "hat nem",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu nước dùng",
+        "description": "Đun sôi nước với ngũ vị hương, nước mắm, đường, hạt nêm trong 10 phút.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hầm thịt",
+        "description": "Cho thịt bò vào hầm cho đến khi chín mềm.",
+        "tip": "Thái lát mỏng khi ăn kèm đồ chua."
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu nước dùng** - Đun sôi nước với ngũ vị hương, nước mắm, đường, hạt nêm trong 10 phút.\nBước 2: **Hầm thịt** - Cho thịt bò vào hầm cho đến khi chín mềm. (Mẹo: Thái lát mỏng khi ăn kèm đồ chua.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 83"
+  },
+  {
+    "id": "recipe-book-0071",
+    "name": "Hoa kim châm xào tôm",
+    "normalized_name": "hoa kim cham xao tom",
+    "description": "Món xào thanh đạm với vị ngọt của tôm và độ giòn của hoa kim châm.",
+    "image_url": "images/hoa_kim_cham_xao_tom.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào tôm",
+        "description": "Phi thơm tỏi, xào tôm săn với nước mắm, đường trong lửa lớn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hoàn thiện",
+        "description": "Cho hoa vào xào nhanh cùng tôm và hành lá.",
+        "tip": "Xào nhanh tay để giữ độ giòn của hoa."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào tôm** - Phi thơm tỏi, xào tôm săn với nước mắm, đường trong lửa lớn.\nBước 2: **Hoàn thiện** - Cho hoa vào xào nhanh cùng tôm và hành lá. (Mẹo: Xào nhanh tay để giữ độ giòn của hoa.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 170"
+  },
+  {
+    "id": "recipe-book-0072",
+    "name": "Tràng lợn hấp gừng",
+    "normalized_name": "trang lon hap gung",
+    "description": "Tràng lợn trắng giòn, thơm nồng mùi gừng tươi, chấm cùng mắm tôm.",
+    "image_url": "images/trang_lon_hap_gung.jpg",
+    "cook_time_minutes": 3,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (tràng)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mắm tôm",
+        "normalized_name": "mam tom",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Luộc sơ tràng lợn, thái miếng vừa ăn. Ướp với nước mắm, đường, tiêu và gừng thái sợi.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp",
+        "description": "Cho vào xững hấp trong 3 phút để ngấm gia vị.",
+        "tip": "Ăn nóng với mắm tôm pha chanh ớt."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Luộc sơ tràng lợn, thái miếng vừa ăn. Ướp với nước mắm, đường, tiêu và gừng thái sợi.\nBước 2: **Hấp** - Cho vào xững hấp trong 3 phút để ngấm gia vị. (Mẹo: Ăn nóng với mắm tôm pha chanh ớt.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 187"
+  },
+  {
+    "id": "recipe-book-0073",
+    "name": "Tôm kho đánh",
+    "normalized_name": "tom kho đanh",
+    "description": "Món ăn đậm đà với tôm băm và thịt ba chỉ xắt sợi.",
+    "image_url": "images/tom_kho_danh.jpg",
+    "cook_time_minutes": 5,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram (ba chỉ)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tỏi",
+        "normalized_name": "toi",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào thịt",
+        "description": "Phi thơm tỏi, xào thịt ba chỉ săn lại.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Kho tôm",
+        "description": "Cho tôm đã đập dập vào xào cùng thịt và gia vị. Đun thêm nước sôi cho đến khi sền sệt trong 5 phút.",
+        "tip": "Dùng làm nước chấm rau luộc rất ngon."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào thịt** - Phi thơm tỏi, xào thịt ba chỉ săn lại.\nBước 2: **Kho tôm** - Cho tôm đã đập dập vào xào cùng thịt và gia vị. Đun thêm nước sôi cho đến khi sền sệt trong 5 phút. (Mẹo: Dùng làm nước chấm rau luộc rất ngon.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 124"
+  },
+  {
+    "id": "recipe-book-0074",
+    "name": "Mọc tôm",
+    "normalized_name": "moc tom",
+    "description": "Viên tôm hồng hào xen lẫn nấm hương vàng nâu, vị ngọt giòn dai.",
+    "image_url": "images/moc_tom.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "300",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram (thịt thăn)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Giã nhân",
+        "description": "Tôm bóc vỏ, thịt lợn thái mỏng đem giã nhuyễn với muối, nước mắm cho đến khi dẻo như giò.",
+        "tip": "Quết kỹ để mọc có độ dai."
+      },
+      {
+        "step_number": 2,
+        "title": "Nấu canh",
+        "description": "Đun sôi nước với cà rốt, thả viên mọc vào nấu cho đến khi mọc nổi lên là chín.",
+        "tip": "Hớt bọt để nước canh trong."
+      }
+    ],
+    "steps_text": "Bước 1: **Giã nhân** - Tôm bóc vỏ, thịt lợn thái mỏng đem giã nhuyễn với muối, nước mắm cho đến khi dẻo như giò. (Mẹo: Quết kỹ để mọc có độ dai.)\nBước 2: **Nấu canh** - Đun sôi nước với cà rốt, thả viên mọc vào nấu cho đến khi mọc nổi lên là chín. (Mẹo: Hớt bọt để nước canh trong.)",
+    "source": "555 món ăn Việt Nam, trang 118"
+  },
+  {
+    "id": "recipe-book-0075",
+    "name": "Mọc nước",
+    "normalized_name": "moc nuoc",
+    "description": "Canh mọc thanh mát với nấm hương và hành lá thơm nồng.",
+    "image_url": "images/moc_nuoc.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "15",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mì chính",
+        "normalized_name": "mi chinh",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Trộn mọc",
+        "description": "Thịt lợn băm nhỏ trộn với gia vị, viên thành từng viên tròn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Nấu canh",
+        "description": "Ninh xương lấy nước dùng, thả mọc vào đun nhỏ lửa đến khi mọc nổi lên mặt nước.",
+        "tip": "Nước dùng trong, viên mọc hồng là đạt."
+      }
+    ],
+    "steps_text": "Bước 1: **Trộn mọc** - Thịt lợn băm nhỏ trộn với gia vị, viên thành từng viên tròn.\nBước 2: **Nấu canh** - Ninh xương lấy nước dùng, thả mọc vào đun nhỏ lửa đến khi mọc nổi lên mặt nước. (Mẹo: Nước dùng trong, viên mọc hồng là đạt.)",
+    "source": "555 món ăn Việt Nam, trang 186"
+  },
+  {
+    "id": "recipe-book-0076",
+    "name": "Trứng đúc thịt lợn",
+    "normalized_name": "trung đuc thit lon",
+    "description": "Món trứng rán xốp, thơm mùi hành khô và tiêu bột.",
+    "image_url": "images/trung_duc_thit_lon.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "3",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "150",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành khô",
+        "normalized_name": "hanh kho",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "1",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Trộn hỗn hợp",
+        "description": "Thịt lợn băm nhỏ trộn cùng trứng, hành khô băm và gia vị.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Rán trứng",
+        "description": "Đun mỡ nóng già, đổ hỗn hợp trứng vào dàn đều và rán vàng hai mặt.",
+        "tip": "Rán lửa nhỏ để thịt bên trong chín đều."
+      }
+    ],
+    "steps_text": "Bước 1: **Trộn hỗn hợp** - Thịt lợn băm nhỏ trộn cùng trứng, hành khô băm và gia vị.\nBước 2: **Rán trứng** - Đun mỡ nóng già, đổ hỗn hợp trứng vào dàn đều và rán vàng hai mặt. (Mẹo: Rán lửa nhỏ để thịt bên trong chín đều.)",
+    "source": "555 món ăn Việt Nam, trang 321"
+  },
+  {
+    "id": "recipe-book-0077",
+    "name": "Bò sốt gan",
+    "normalized_name": "bo sot gan",
+    "description": "Thịt bò thăn mềm mịn kết hợp cùng sốt gan gà béo ngậy.",
+    "image_url": "images/bo_sot_gan.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chính"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "50",
+        "unit": "gram (gan)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành tây",
+        "normalized_name": "hanh tay",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Xì dầu",
+        "normalized_name": "xi dau",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm sốt gan",
+        "description": "Xào hành tây và gan gà băm nhuyễn với gia vị và bơ cho chín.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Áp chảo bò",
+        "description": "Áp chảo thịt bò với dầu cho chín tới, sau đó rưới sốt gan lên trên.",
+        "tip": "Thịt bò chín tái sẽ mềm hơn."
+      }
+    ],
+    "steps_text": "Bước 1: **Làm sốt gan** - Xào hành tây và gan gà băm nhuyễn với gia vị và bơ cho chín.\nBước 2: **Áp chảo bò** - Áp chảo thịt bò với dầu cho chín tới, sau đó rưới sốt gan lên trên. (Mẹo: Thịt bò chín tái sẽ mềm hơn.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 79"
+  },
+  {
+    "id": "recipe-book-0078",
+    "name": "Gà rút xương",
+    "normalized_name": "ga rut xuong",
+    "description": "Gà nguyên con được rút xương, nhồi nhân thịt và hạt sen cao cấp.",
+    "image_url": "images/ga_rut_xuong.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "hard",
+    "servings": 6,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "1400",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "200",
+        "unit": "gram (nạc vai)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Gừng",
+        "normalized_name": "gung",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "8",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm nhân",
+        "description": "Trộn thịt lợn băm, hạt sen luộc chín và gia vị làm nhân.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp gà",
+        "description": "Nhồi nhân vào bụng gà đã rút xương, khâu kín lại rồi đem hấp cách thủy cho đến khi chín mềm.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Làm nhân** - Trộn thịt lợn băm, hạt sen luộc chín và gia vị làm nhân.\nBước 2: **Hấp gà** - Nhồi nhân vào bụng gà đã rút xương, khâu kín lại rồi đem hấp cách thủy cho đến khi chín mềm.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 22"
+  },
+  {
+    "id": "recipe-book-0079",
+    "name": "Trứng cuộn thịt lợn",
+    "normalized_name": "trung cuon thit lon",
+    "description": "Nhân thịt lợn đậm đà được bao bọc bởi lớp trứng vàng xốp.",
+    "image_url": "images/trung_cuon_thit_lon.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "270",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "200",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm nhân",
+        "description": "Thịt băm trộn hành củ và gia vị mắm tiêu.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Rán cuộn",
+        "description": "Tráng trứng mỏng, đặt thịt vào giữa rồi cuộn lại, rán vàng các mặt.",
+        "tip": "Lớp vỏ trứng phải bọc kín nhân thịt."
+      }
+    ],
+    "steps_text": "Bước 1: **Làm nhân** - Thịt băm trộn hành củ và gia vị mắm tiêu.\nBước 2: **Rán cuộn** - Tráng trứng mỏng, đặt thịt vào giữa rồi cuộn lại, rán vàng các mặt. (Mẹo: Lớp vỏ trứng phải bọc kín nhân thịt.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 49"
+  },
+  {
+    "id": "recipe-book-0080",
+    "name": "Tôm tẩm bột chiên",
+    "normalized_name": "tom tam bot chien",
+    "description": "Tôm suá giòn rụm với lớp vỏ bột mì và trứng gà vàng ruộm.",
+    "image_url": "images/tom_tam_bot_chien.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chiên"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "300",
+        "unit": "gram (suá)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "1",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Bột mì",
+        "normalized_name": "bot mi",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "100",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Tẩm bột",
+        "description": "Tôm nhúng qua bột mì khô, sau đó nhúng qua trứng đánh tan.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Chiên giòn",
+        "description": "Chiên ngập dầu cho đến khi vỏ ngoài vàng đều, vớt ra thấm dầu.",
+        "tip": "Ăn kèm sốt chua ngọt."
+      }
+    ],
+    "steps_text": "Bước 1: **Tẩm bột** - Tôm nhúng qua bột mì khô, sau đó nhúng qua trứng đánh tan.\nBước 2: **Chiên giòn** - Chiên ngập dầu cho đến khi vỏ ngoài vàng đều, vớt ra thấm dầu. (Mẹo: Ăn kèm sốt chua ngọt.)",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 92"
+  },
+  {
+    "id": "recipe-book-0081",
+    "name": "Bún xào chay",
+    "normalized_name": "bun xao chay",
+    "description": "Sợi bún dai mïìm, thanh đạm với đậu phụ và cà rốt.",
+    "image_url": "images/bun_xao_chay.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chay"
+    ],
+    "ingredients": [
+      {
+        "name": "Đậu phụ",
+        "normalized_name": "đau phu",
+        "quantity": "1",
+        "unit": "miếng (taâu huä ky)",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "20",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào rau củ",
+        "description": "Phi thơm hành, cho cà rốt và đậu phụ vào xào chín.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Trộn bún",
+        "description": "Cho bún vào đảo cùng gia vị cho thấm đều.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Xào rau củ** - Phi thơm hành, cho cà rốt và đậu phụ vào xào chín.\nBước 2: **Trộn bún** - Cho bún vào đảo cùng gia vị cho thấm đều.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 112"
+  },
+  {
+    "id": "recipe-book-0082",
+    "name": "Vằn thắn chiên giòn",
+    "normalized_name": "van than chien gion",
+    "description": "Bánh rán nhân thịt và tôm đậm đà hương vị Trung Hoa.",
+    "image_url": "images/van_than_chien_gion.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chiên"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "200",
+        "unit": "gram (xay)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành tây",
+        "normalized_name": "hanh tay",
+        "quantity": "1/2",
+        "unit": "củ",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "50",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Xì dầu",
+        "normalized_name": "xi dau",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm nhân",
+        "description": "Trộn thịt, tôm, hành tây và gia vị xì dầu, tiêu cho thấm.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Gói và chiên",
+        "description": "Gói nhân vào lá vằn thắn rồi chiên vàng giòn.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Làm nhân** - Trộn thịt, tôm, hành tây và gia vị xì dầu, tiêu cho thấm.\nBước 2: **Gói và chiên** - Gói nhân vào lá vằn thắn rồi chiên vàng giòn.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 118"
+  },
+  {
+    "id": "recipe-book-0083",
+    "name": "Thịt bò kho",
+    "normalized_name": "thit bo kho",
+    "description": "Thịt bò săn chắc, màu nâu đẹp, nước kho sền sệt đậm đà.",
+    "image_url": "images/thit_bo_kho.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món kho"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt bò",
+        "normalized_name": "thit bo",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "30",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "20",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Ướp thịt",
+        "description": "Ướp bò với đường cho săn chắc, sau đó thêm mắm muối tiêu.",
+        "tip": "Ướp ít nhất 1 giờ."
+      },
+      {
+        "step_number": 2,
+        "title": "Kho thịt",
+        "description": "Đun nhỏ lửa cho đến khi thịt mềm và nước kho sánh lại.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Ướp thịt** - Ướp bò với đường cho săn chắc, sau đó thêm mắm muối tiêu. (Mẹo: Ướp ít nhất 1 giờ.)\nBước 2: **Kho thịt** - Đun nhỏ lửa cho đến khi thịt mềm và nước kho sánh lại.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 37"
+  },
+  {
+    "id": "recipe-book-0084",
+    "name": "Cà tím tẩm bột chiên",
+    "normalized_name": "ca tim tam bot chien",
+    "description": "Cà tím mềm ngọt bên trong, giòn rụm lớp vỏ bên ngoài.",
+    "image_url": "images/ca_tim_tam_bot_chien.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chiên"
+    ],
+    "ingredients": [
+      {
+        "name": "Cà tím",
+        "normalized_name": "ca tim",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "50",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Cà tím thái miếng, nhúng qua lớp bột mỏng.",
+        "tip": "Chọn quả màu tím ngả nâu sẽ dẻo hơn."
+      },
+      {
+        "step_number": 2,
+        "title": "Chiên",
+        "description": "Chiên vàng trong dầu nóng, vớt ra để ráo mỡ.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Cà tím thái miếng, nhúng qua lớp bột mỏng. (Mẹo: Chọn quả màu tím ngả nâu sẽ dẻo hơn.)\nBước 2: **Chiên** - Chiên vàng trong dầu nóng, vớt ra để ráo mỡ.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 111"
+  },
+  {
+    "id": "recipe-book-0085",
+    "name": "Cuốn diệp",
+    "normalized_name": "cuon diep",
+    "description": "Món cuốn thanh mát từ lá cải xanh, thịt luộc và tôm.",
+    "image_url": "images/cuon_diep.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món cuốn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram (ba chỉ)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Hành lá",
+        "normalized_name": "hanh la",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Sơ chế",
+        "description": "Luộc thịt và tôm, thái miếng mỏng. Hành lá trần qua nước sôi.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Cuốn",
+        "description": "Dùng lá cải xanh cuốn bún, tôm, thịt rồi buộc lại bằng hành lá.",
+        "tip": "Chấm cùng tương đậu nành pha đường tỏi."
+      }
+    ],
+    "steps_text": "Bước 1: **Sơ chế** - Luộc thịt và tôm, thái miếng mỏng. Hành lá trần qua nước sôi.\nBước 2: **Cuốn** - Dùng lá cải xanh cuốn bún, tôm, thịt rồi buộc lại bằng hành lá. (Mẹo: Chấm cùng tương đậu nành pha đường tỏi.)",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 125"
+  },
+  {
+    "id": "recipe-book-0086",
+    "name": "Chả trứng hấp",
+    "normalized_name": "cha trung hap",
+    "description": "Chả mềm mượt, béo ngậy với thịt băm và nấm mèo.",
+    "image_url": "images/cha_trung_hap.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món hấp"
+    ],
+    "ingredients": [
+      {
+        "name": "Trứng vịt",
+        "normalized_name": "trung vit",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Trộn nhân",
+        "description": "Đánh tan trứng với thịt băm, nấm và gia vị.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Hấp chín",
+        "description": "Đem hấp cách thủy cho đến khi chín, thoa lòng đỏ lên mặt cho đẹp.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Trộn nhân** - Đánh tan trứng với thịt băm, nấm và gia vị.\nBước 2: **Hấp chín** - Đem hấp cách thủy cho đến khi chín, thoa lòng đỏ lên mặt cho đẹp.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 218"
+  },
+  {
+    "id": "recipe-book-0087",
+    "name": "Cơm thập cẩm hạt ngô",
+    "normalized_name": "com thap cam hat ngo",
+    "description": "Món cơm đầy màu sắc và dinh dưỡng với ngô non và thịt nạc.",
+    "image_url": "images/com_thap_cam_hat_ngo.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chính"
+    ],
+    "ingredients": [
+      {
+        "name": "Ngô",
+        "normalized_name": "ngo",
+        "quantity": "100",
+        "unit": "gram (non)",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Dầu ăn",
+        "normalized_name": "dau an",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chuẩn bị",
+        "description": "Thái hạt lựu cà rốt, ngô và thịt lợn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Nấu cơm",
+        "description": "Trộn các nguyên liệu vào cơm trắng, nêm gia vị rồi đun nóng.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chuẩn bị** - Thái hạt lựu cà rốt, ngô và thịt lợn.\nBước 2: **Nấu cơm** - Trộn các nguyên liệu vào cơm trắng, nêm gia vị rồi đun nóng.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 60"
+  },
+  {
+    "id": "recipe-book-0088",
+    "name": "Thịt luộc giấm tương",
+    "normalized_name": "thit luoc giam tuong",
+    "description": "Thịt lợn luộc chín tới, ngâm trong hỗn hợp tương bần mặn ngọt.",
+    "image_url": "images/thit_luoc_giam_tuong.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "1000",
+        "unit": "gram (ba chỉ)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Luộc thịt",
+        "description": "Luộc thịt chín rồi ngâm ngay vào nước đá cho sùn chắc.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Ngâm tương",
+        "description": "Nấu tương với đường cho tan rồi để nguội. Cho thịt vào hũ, đổ tương ngập mặt thịt ngâm trong 1 tuần.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Luộc thịt** - Luộc thịt chín rồi ngâm ngay vào nước đá cho sùn chắc.\nBước 2: **Ngâm tương** - Nấu tương với đường cho tan rồi để nguội. Cho thịt vào hũ, đổ tương ngập mặt thịt ngâm trong 1 tuần.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 128"
+  },
+  {
+    "id": "recipe-book-0089",
+    "name": "Cà chua nấu trứng",
+    "normalized_name": "ca chua nau trung",
+    "description": "Canh trứng rực rỡ sắc đỏ, vị chua dịu dễ ăn.",
+    "image_url": "images/ca_chua_nau_trung.jpg",
+    "cook_time_minutes": 15,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Cà chua",
+        "normalized_name": "ca chua",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Trứng gà",
+        "normalized_name": "trung ga",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "5",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu nước dùng",
+        "description": "Xào cà chua mềm, thêm nước đun sôi.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Thêm trứng",
+        "description": "Đánh tan trứng, chế từ từ vào nồi nước đang sôi và quấy nhẹ tay.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu nước dùng** - Xào cà chua mềm, thêm nước đun sôi.\nBước 2: **Thêm trứng** - Đánh tan trứng, chế từ từ vào nồi nước đang sôi và quấy nhẹ tay.",
+    "source": "555 món ăn Việt Nam, trang 47"
+  },
+  {
+    "id": "recipe-book-0090",
+    "name": "Rau sốt cay",
+    "normalized_name": "rau sot cay",
+    "description": "Món trộn đậm đà với tôm, thịt băm và xốt mắm tôm tỏi ớt.",
+    "image_url": "images/rau_sot_cay.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món nộm"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "500",
+        "unit": "gram (khô)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Dưa chuột",
+        "normalized_name": "dua chuot",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Mắm tôm",
+        "normalized_name": "mam tom",
+        "quantity": "2",
+        "unit": "muỗng xúp",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "100",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm xốt",
+        "description": "Giaã tôm khô, trộn cùng thịt nạc, mắm tôm, đường và chanh, đun nhỏ lửa cho chín.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Trình bày",
+        "description": "Xếp rau ra đĩa, rưới xốt cay lên trên và dùng nóng.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Làm xốt** - Giaã tôm khô, trộn cùng thịt nạc, mắm tôm, đường và chanh, đun nhỏ lửa cho chín.\nBước 2: **Trình bày** - Xếp rau ra đĩa, rưới xốt cay lên trên và dùng nóng.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 108"
+  },
+  {
+    "id": "recipe-book-0091",
+    "name": "Giò mỡ",
+    "normalized_name": "gio mo",
+    "description": "Giò lợn chùn giòn, thơm mùi tiêu và mắm truyền thống.",
+    "image_url": "images/gio_mo.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 6,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "1500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "80",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "5",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chuẩn bị",
+        "description": "Xào thịt săn với gia vị mắm muối tiêu cho thấm.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Gói giò",
+        "description": "Gói thịt vào lá rồi cho vào nồi luộc trong 1 giờ cho đến khi chín mềm.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chuẩn bị** - Xào thịt săn với gia vị mắm muối tiêu cho thấm.\nBước 2: **Gói giò** - Gói thịt vào lá rồi cho vào nồi luộc trong 1 giờ cho đến khi chín mềm.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 76"
+  },
+  {
+    "id": "recipe-book-0092",
+    "name": "Xúc xích",
+    "normalized_name": "xuc xich",
+    "description": "Thành phẩm dai ngọt, thơm mùi tỏi và gia vị đặc trưng.",
+    "image_url": "images/xuc_xich.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "hard",
+    "servings": 6,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "500",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đường",
+        "normalized_name": "đuong",
+        "quantity": "30",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Hạt tiêu",
+        "normalized_name": "hat tieu",
+        "quantity": "10",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Làm nhân",
+        "description": "Thịt xay nhuyễn ướp tỏi, muối, tiêu, đường và nước mắm trong 30 phút.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Nhồi xúc xích",
+        "description": "Nhồi nhân vào ruột non rồi đem luộc hoặc chiên chín.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Làm nhân** - Thịt xay nhuyễn ướp tỏi, muối, tiêu, đường và nước mắm trong 30 phút.\nBước 2: **Nhồi xúc xích** - Nhồi nhân vào ruột non rồi đem luộc hoặc chiên chín.",
+    "source": "Kỹ thuật chế biến 300 món ăn ngon, trang 78"
+  },
+  {
+    "id": "recipe-book-0093",
+    "name": "Mướp đắng xào trứng vịt",
+    "normalized_name": "muop đang xao trung vit",
+    "description": "Vị đắng thanh quyện trứng vịt béo ngậy, đĩa xào khô ráo.",
+    "image_url": "images/muop_dang_xao_trung_vit.jpg",
+    "cook_time_minutes": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món xào"
+    ],
+    "ingredients": [
+      {
+        "name": "Mướp đắng",
+        "normalized_name": "muop đang",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Trứng vịt",
+        "normalized_name": "trung vit",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c2"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Mỡ nước",
+        "normalized_name": "mo nuoc",
+        "quantity": "50",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Xào mướp",
+        "description": "Phi thơm hành, cho mướp đắng vào xào trên lửa lớn.",
+        "tip": null
+      },
+      {
+        "step_number": 2,
+        "title": "Thêm trứng",
+        "description": "Rưới trứng vịt đã đánh tan vào đảo đều cho đến khi khô ráo.",
+        "tip": "Xào nhanh tay để mướp giữ màu xanh."
+      }
+    ],
+    "steps_text": "Bước 1: **Xào mướp** - Phi thơm hành, cho mướp đắng vào xào trên lửa lớn.\nBước 2: **Thêm trứng** - Rưới trứng vịt đã đánh tan vào đảo đều cho đến khi khô ráo. (Mẹo: Xào nhanh tay để mướp giữ màu xanh.)",
+    "source": "555 món ăn Việt Nam, trang 34"
+  },
+  {
+    "id": "recipe-book-0094",
+    "name": "Khoai lang luộc",
+    "normalized_name": "khoai lang luoc",
+    "description": "Khoai lang mïìm bở, bùi ngọt tự nhiên.",
+    "image_url": "images/khoai_lang_luoc.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 2,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món chính"
+    ],
+    "ingredients": [
+      {
+        "name": "Khoai lang",
+        "normalized_name": "khoai lang",
+        "quantity": "500",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c4"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Luộc khoai",
+        "description": "Luộc khoai ngập nước với ít muối cho đến khi xiên đũa thấy mềm bở.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Luộc khoai** - Luộc khoai ngập nước với ít muối cho đến khi xiên đũa thấy mềm bở.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 46"
+  },
+  {
+    "id": "recipe-book-0095",
+    "name": "Canh hẹ nấu thịt lợn",
+    "normalized_name": "canh he nau thit lon",
+    "description": "Sự kết hợp hoàn hảo giữa hẹ xanh và thịt lợn nạc thanh nhiệt.",
+    "image_url": "images/canh_he_nau_thit_lon.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "easy",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Canh"
+    ],
+    "ingredients": [
+      {
+        "name": "Thịt lợn",
+        "normalized_name": "thit lon",
+        "quantity": "100",
+        "unit": "gram (nạc)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Đậu phụ",
+        "normalized_name": "đau phu",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Nước mắm",
+        "normalized_name": "nuoc mam",
+        "quantity": "10",
+        "unit": "ml",
+        "is_optional": false,
+        "category_id": "c5"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "3",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Nấu canh",
+        "description": "Đun sôi nước với thịt, cho đậu phụ và hẹ vào đun sôi bùng là được.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Nấu canh** - Đun sôi nước với thịt, cho đậu phụ và hẹ vào đun sôi bùng là được.",
+    "source": "555 món ăn Việt Nam, trang 51"
+  },
+  {
+    "id": "recipe-book-0096",
+    "name": "Tôm bó ngó sen",
+    "normalized_name": "tom bo ngo sen",
+    "description": "Tôm và thịt gà dai ngọt bó cùng các loại rau củ giòn mát.",
+    "image_url": "images/tom_bo_ngo_sen.jpg",
+    "cook_time_minutes": null,
+    "difficulty": "medium",
+    "servings": 4,
+    "cuisine_type": "Vietnamese",
+    "diet_tags": [
+      "Món mặn"
+    ],
+    "ingredients": [
+      {
+        "name": "Tôm",
+        "normalized_name": "tom",
+        "quantity": "200",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Thịt gà",
+        "normalized_name": "thit ga",
+        "quantity": "200",
+        "unit": "gram (ûác)",
+        "is_optional": false,
+        "category_id": "c1"
+      },
+      {
+        "name": "Dưa chuột",
+        "normalized_name": "dua chuot",
+        "quantity": "2",
+        "unit": "quả",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Cà rốt",
+        "normalized_name": "ca rot",
+        "quantity": "1",
+        "unit": "cuả",
+        "is_optional": false,
+        "category_id": "c3"
+      },
+      {
+        "name": "Muối",
+        "normalized_name": "muoi",
+        "quantity": "2",
+        "unit": "gram",
+        "is_optional": false,
+        "category_id": "c5"
+      }
+    ],
+    "instructions": [
+      {
+        "step_number": 1,
+        "title": "Chế biến",
+        "description": "Tôm và gà luộc chín, thái miếng. Bó các nguyên liệu lại bằng hành lá.",
+        "tip": null
+      }
+    ],
+    "steps_text": "Bước 1: **Chế biến** - Tôm và gà luộc chín, thái miếng. Bó các nguyên liệu lại bằng hành lá.",
+    "source": "Nấu hơn 200 món ăn truyền thống Việt Nam, trang 223"
+  }
+]

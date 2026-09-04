@@ -1,24 +1,44 @@
+"""
+Food AI Service - Production Application Entry Point.
+Provides unified Detection (YOLO26, RT-DETR, RF-DETR) and RAG Recipe Suggestion services.
+"""
+
 import os
-import json
+import sys
+import logging
 from typing import List, Optional, Dict, Any
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from contextlib import asynccontextmanager
+
+# Tránh UnicodeEncodeError trên Windows console (cp1252)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
-from contextlib import asynccontextmanager
 from pydantic import BaseModel
 
-# Khởi tạo các Services
-from services.vision_service import VisionService
-from services.chat_service import CookingLangChainService
-from services.chatbot_service import get_chatbot_service
-from services.rag_controller import get_rag_controller
-from services.rag_schemas import RecipeSuggestRequest, RecipeSuggestResponse
+from detectors import (
+    get_detector,
+    list_available_detectors,
+    DETECTOR_REGISTRY,
+    BaseDetector
+)
+from rag import get_rag_service, RAGService
+from api import detection_router, rag_router
 
+# Load environment variables
 load_dotenv()
 
-# Biến toàn cục để lưu models
-models = {}
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] [%(name)s]: %(message)s"
+)
+logger = logging.getLogger("FoodAIService")
 
 
 class CreateChatSessionRequest(BaseModel):
@@ -30,34 +50,77 @@ class SendChatMessageRequest(BaseModel):
     recipes: Optional[List[Dict[str, Any]]] = None
     user_pantry: Optional[List[str]] = None
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: Load models 1 lần khi khởi động server
-    print("====================================")
-    print(" KHỞI ĐỘNG FOOD AI SERVICE ")
-    print("====================================")
-    
-    models["vision"] = VisionService()
-    models["ai_assistant"] = CookingLangChainService()
-    models["chatbot"] = get_chatbot_service()
-    models["rag_controller"] = get_rag_controller()
-    
-    print(" ✓ Models đã load xong và sẵn sàng!")
-    
+    """
+    Application Lifespan:
+    1. Read INGREDIENT_MODEL from ENV (default: rtdetr).
+    2. Check registry and load selected detector ONCE at startup.
+    3. Initialize RAG Food Database and retriever ONCE at startup.
+    4. Store instances in app.state for request handlers.
+    """
+    logger.info("========================================")
+    logger.info(" STARTING FOOD AI SERVICE ")
+    logger.info("========================================")
+
+    # 1. Detectors Initialization
+    model_name = os.getenv("INGREDIENT_MODEL", "rtdetr").lower().strip()
+    available_detectors = list_available_detectors()
+    logger.info(f"Configured INGREDIENT_MODEL: '{model_name}'")
+    logger.info(f"Available Detectors: {available_detectors}")
+
+    if model_name not in DETECTOR_REGISTRY:
+        error_msg = (
+            f"Unsupported detector: '{model_name}'. "
+            f"Available detectors: {', '.join(available_detectors)}"
+        )
+        logger.critical(error_msg)
+        raise RuntimeError(error_msg)
+
+    try:
+        active_detector: BaseDetector = get_detector(model_name)
+        active_detector.load()
+        app.state.detector = active_detector
+        logger.info(f" Active detector '{model_name}' loaded successfully into memory.")
+    except Exception as exc:
+        logger.error(f" Failed to load detector '{model_name}': {exc}", exc_info=True)
+        raise RuntimeError(f"Detector loading failed: {exc}")
+
+    # 2. RAG Service Initialization
+    try:
+        rag_service: RAGService = get_rag_service()
+        app.state.rag_service = rag_service
+        recipe_count = len(rag_service.food_db.get_all_recipes())
+        logger.info(f" RAG Food Database loaded with {recipe_count} recipes.")
+    except Exception as exc:
+        logger.error(f" Failed to initialize RAG Service: {exc}", exc_info=True)
+        raise RuntimeError(f"RAG Service initialization failed: {exc}")
+
+    # 3. Chatbot Service (lazy-loaded on demand when chat endpoints are called)
+    app.state.chatbot = None
+
+    logger.info(" Food AI Service startup complete and ready for requests.")
+
     yield
-    
-    # Shutdown: Dọn dẹp nếu cần
-    models.clear()
-    print(" Server đã tắt!")
+
+    # Shutdown
+    logger.info(" Shutting down Food AI Service...")
+    if hasattr(app.state, "detector"):
+        del app.state.detector
+    if hasattr(app.state, "rag_service"):
+        del app.state.rag_service
+    logger.info(" Clean shutdown complete.")
+
 
 app = FastAPI(
     title="Food AI Service",
-    description="AI Service for food ingredient detection and recipe suggestion",
-    version="2.0.0",
+    description="Modular AI Service for Ingredient Detection (YOLO26/RT-DETR/RF-DETR) and RAG Recipe Suggestion",
+    version="3.0.0",
     lifespan=lifespan
 )
 
-# CORS - Cho phép Backend khác port gọi qua
+# CORS Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -66,17 +129,61 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get('/health')
+# Register API Routers
+app.include_router(detection_router)
+app.include_router(rag_router)
+
+
+@app.get("/health", tags=["Health"])
 async def health_check():
-    return {"status": "AI Service is active and running!"}
+    """Service health check endpoint with detector and RAG status."""
+    active_det = getattr(app.state, "detector", None)
+    active_name = active_det.model_name if active_det else "uninitialized"
+    is_loaded = active_det.is_loaded if active_det else False
+
+    rag_srv = getattr(app.state, "rag_service", None)
+    recipes_count = len(rag_srv.food_db.get_all_recipes()) if rag_srv else 0
+
+    try:
+        from services.llm_config import get_llm_settings, llm_settings_summary
+        llm_info = llm_settings_summary(get_llm_settings())
+    except Exception:
+        llm_info = {"provider": os.getenv("LLM_PROVIDER", "gemini"), "model": os.getenv("LLM_MODEL", "gemini-2.5-flash")}
+
+    return {
+        "status": "healthy",
+        "service": "Food AI Service",
+        "version": "3.0.0",
+        "active_detector": active_name,
+        "detector_loaded": is_loaded,
+        "available_detectors": list_available_detectors(),
+        "rag_recipes_count": recipes_count,
+        "llm": llm_info
+    }
 
 
-# ============== CHAT SESSION API ==============
+def _get_chatbot_instance():
+    chatbot = getattr(app.state, "chatbot", None)
+    if chatbot is None:
+        try:
+            from services.chatbot_service import get_chatbot_service
+            app.state.chatbot = get_chatbot_service()
+            chatbot = app.state.chatbot
+        except Exception as e:
+            logger.warning(f"Chatbot service unavailable: {e}")
+            return None
+    return chatbot
 
-@app.post('/api/ai/chat/sessions')
+
+# ============== CHAT SESSION APIS (Backward Compatible) ==============
+
+@app.post("/api/ai/chat/sessions", tags=["Chat"])
 async def create_chat_session(request: CreateChatSessionRequest):
     try:
-        session = models["chatbot"].create_session(title=request.title)
+        chatbot = _get_chatbot_instance()
+        if not chatbot:
+            raise HTTPException(status_code=503, detail="Chatbot service is not available")
+        session = chatbot.create_session(title=request.title)
         return JSONResponse(
             status_code=200,
             content={
@@ -85,18 +192,24 @@ async def create_chat_session(request: CreateChatSessionRequest):
                 "message": "Tạo chat session thành công"
             }
         )
+    except HTTPException:
+        raise
     except Exception as e:
-        print(f" [API] Create session error: {e}")
+        logger.error(f"[API] Create session error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post('/api/ai/chat/sessions/{session_id}/messages')
+@app.post("/api/ai/chat/sessions/{session_id}/messages", tags=["Chat"])
 async def send_chat_message(session_id: str, request: SendChatMessageRequest):
     try:
         if not request.message or not request.message.strip():
             raise HTTPException(status_code=400, detail="message không được để trống")
 
-        result = models["chatbot"].chat(
+        chatbot = _get_chatbot_instance()
+        if not chatbot:
+            raise HTTPException(status_code=503, detail="Chatbot service is not available")
+
+        result = chatbot.chat(
             session_id=session_id,
             message=request.message.strip(),
             recipes=request.recipes,
@@ -114,124 +227,17 @@ async def send_chat_message(session_id: str, request: SendChatMessageRequest):
     except HTTPException:
         raise
     except Exception as e:
-        print(f" [API] Send message error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post('/api/ai/analyze-image')
-async def analyze_image(
-    image: UploadFile = File(...),
-    recipe_chunks: str = Form(default=None)
-):
-    try:
-        # Đọc bytes từ file upload
-        image_bytes = await image.read()
-        
-        # Bước 1: Computer Vision (YOLO + ResNet)
-        detected_items = models["vision"].predict_image(image_bytes)
-        
-        if not detected_items:
-            return JSONResponse(
-                status_code=200,
-                content={
-                    "success": True,
-                    "data": {
-                        "ingredients": [],
-                        "ai_suggestion": None
-                    },
-                    "message": "Không nhận diện được nguyên liệu nào."
-                }
-            )
-
-        # Bước 2: AI Reasoning (LangChain + OpenAI)
-        ingredient_names = [item['name'] for item in detected_items]
-
-        parsed_recipe_chunks = []
-        if recipe_chunks:
-            try:
-                parsed_recipe_chunks = json.loads(recipe_chunks)
-            except json.JSONDecodeError:
-                raise HTTPException(
-                    status_code=400,
-                    detail="recipe_chunks phải là JSON hợp lệ (mảng chuỗi hoặc object)."
-                )
-
-        suggestion = models["ai_assistant"].get_suggestion(
-            ingredient_names,
-            parsed_recipe_chunks
-        )
-
-        # Bước 3: Trả về kết quả JSON tổng hợp
-        return JSONResponse(
-            status_code=200,
-            content={
-                "success": True,
-                "data": {
-                    "ingredients": detected_items,
-                    "ai_suggestion": suggestion
-                },
-                "message": "Phân tích hình ảnh và tư vấn thành công!"
-            }
-        )
-
-    except Exception as e:
-        print(f"Lỗi Server: {e}")
+        logger.error(f"[API] Send message error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# ============== RAG RECIPE SUGGESTION API ==============
-
-@app.post('/api/ai/recipe-suggest', response_model=RecipeSuggestResponse)
-@app.post('/internal/rag/recipe-suggest', response_model=RecipeSuggestResponse)
-async def rag_recipe_suggest(request: RecipeSuggestRequest):
-    """
-    Internal API: Gợi ý công thức món ăn bằng RAG
-    
-    Flow:
-    1. Nhận danh sách nguyên liệu user có + recipes từ backend
-    2. Build embeddings và index vector store
-    3. Retrieve top K recipes phù hợp
-    4. Dùng LLM sinh gợi ý cuối cùng
-    
-    Request body:
-    {
-        "user_ingredients": ["trứng", "cà chua", "hành lá"],
-        "recipes": [
-            {
-                "id": "1",
-                "name": "Trứng chiên cà chua",
-                "description": "...",
-                "steps": "...",
-                "ingredients": [{"name": "trứng", "amount": "2 quả"}]
-            }
-        ],
-        "top_k": 5
-    }
-    """
-    try:
-        print(f"\n{'='*60}")
-        print(" [API] POST /internal/rag/recipe-suggest")
-        print(f" - Ingredients: {request.user_ingredients}")
-        print(f" - Recipes count: {len(request.recipes)}")
-        print(f"{'='*60}\n")
-        
-        result = models["rag_controller"].suggest_recipe(request)
-        
-        return result
-    
-    except Exception as e:
-        print(f" [API] Error: {e}")
-        import traceback
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     import uvicorn
-    # Đọc port từ file .env, mặc định là 8000
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(
         "run_ai:app",
-        host='0.0.0.0',
+        host="0.0.0.0",
         port=port,
-        reload=False,  # Tắt reload khi chạy mô hình nặng
-        workers=1  # 1 worker để tránh load model nhiều lần
+        reload=False,
+        workers=1
     )

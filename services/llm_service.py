@@ -1,14 +1,16 @@
 """
-LLM Service - Gọi OpenAI Chat API để sinh gợi ý công thức
+LLM Service - Gọi local Ollama hoặc OpenAI Chat API để sinh gợi ý công thức
 Xử lý prompt template và parse JSON response
 """
 
-import os
 import json
 import re
 from typing import List, Dict, Any, Optional
-from openai import OpenAI
+
+import os
 from dotenv import load_dotenv
+
+from .llm_client import get_llm_client
 
 load_dotenv()
 
@@ -40,7 +42,7 @@ Dựa vào nguyên liệu người dùng có và các công thức đã tìm đ�
 - Nếu nguyên liệu gần giống (VD: "thịt gà" ≈ "gà") thì coi như khớp
 
 ## OUTPUT FORMAT:
-Trả về JSON với cấu trúc sau (KHÔNG có markdown code block):
+Trả về JSON với cấu trúc sau (KHÔNG có markdown code block, KHÔNG có text giải thích ngoài JSON):
 
 {{
     "best_recipe": "Tên món phù hợp nhất",
@@ -64,15 +66,17 @@ Trả về JSON với cấu trúc sau (KHÔNG có markdown code block):
 
 class LLMService:
     """
-    Service gọi OpenAI Chat API
+    Service gọi OpenAI Chat API hoặc local Ollama
     Xử lý prompt và parse JSON response
     """
     
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.model = "gpt-4o-mini"  # Model nhanh và rẻ, đủ tốt cho task này
+        self.client = get_llm_client()
+        self.model = self.client.model
+        if self.client.provider == "ollama" and os.getenv("OLLAMA_RAG_MODEL"):
+            self.model = os.getenv("OLLAMA_RAG_MODEL", self.model)
         self.temperature = 0.3  # Thấp để output consistent
-        print(f" [LLMService] Initialized with model: {self.model}")
+        print(f" [LLMService] provider={self.client.provider} model={self.model}")
     
     def _format_retrieved_recipes(self, retrieved: List[Dict[str, Any]]) -> str:
         """
@@ -102,26 +106,29 @@ class LLMService:
     def _parse_json_response(self, content: str) -> Optional[Dict[str, Any]]:
         """
         Parse JSON từ LLM response
-        Xử lý cả trường hợp có markdown code block
+        Xử lý cả trường hợp có markdown code block hoặc text rác xung quanh
         """
-        # Loại bỏ markdown code block nếu có
         content = content.strip()
         
-        # Pattern 1: ```json ... ```
+        # Loại bỏ markdown code block nếu có
         json_match = re.search(r'```json\s*([\s\S]*?)\s*```', content)
         if json_match:
             content = json_match.group(1)
         else:
-            # Pattern 2: ``` ... ```
             code_match = re.search(r'```\s*([\s\S]*?)\s*```', content)
             if code_match:
                 content = code_match.group(1)
+                
+        # Tìm {} đầu tiên và cuối cùng để phòng LLM trả thêm text rác
+        braces_match = re.search(r'(\{[\s\S]*\})', content)
+        if braces_match:
+            content = braces_match.group(1)
         
         try:
             return json.loads(content)
         except json.JSONDecodeError as e:
             print(f" [LLMService] JSON parse error: {e}")
-            print(f" [LLMService] Raw content: {content[:500]}")
+            print(f" [LLMService] Raw content: {content[:1000]}")
             return None
     
     def generate_suggestion(
@@ -131,13 +138,6 @@ class LLMService:
     ) -> Dict[str, Any]:
         """
         Gọi LLM để sinh gợi ý công thức
-        
-        Args:
-            user_ingredients: Danh sách nguyên liệu user có
-            retrieved_recipes: Kết quả từ retrieval service
-        
-        Returns:
-            Dict với thông tin gợi ý
         """
         if not retrieved_recipes:
             return {
@@ -160,15 +160,15 @@ class LLMService:
             retrieved_recipes=recipes_str
         )
         
-        print(f" [LLMService] Calling OpenAI with {len(user_ingredients)} ingredients and {len(retrieved_recipes)} recipes")
+        print(f" [LLMService] Calling LLM with {len(user_ingredients)} ingredients and {len(retrieved_recipes)} recipes")
         
         try:
-            response = self.client.chat.completions.create(
+            response = self.client.chat_completions_create(
                 model=self.model,
                 messages=[
                     {
                         "role": "system",
-                        "content": "Bạn là một đầu bếp chuyên nghiệp. Luôn trả lời bằng JSON hợp lệ, không có markdown."
+                        "content": "Bạn là một đầu bếp chuyên nghiệp. Luôn trả lời duy nhất bằng cấu trúc JSON hợp lệ, không bọc markdown, không thêm giải thích ngoài JSON."
                     },
                     {
                         "role": "user",
@@ -193,7 +193,7 @@ class LLMService:
                 return {
                     "best_recipe": best['recipe'].get('name'),
                     "recipe_id": best['recipe'].get('id'),
-                    "reason": "Đây là công thức khớp nhiều nguyên liệu nhất",
+                    "reason": "Đây là công thức khớp nhiều nguyên liệu nhất (Fallback)",
                     "matched_ingredients": best.get('matched_ingredients', []),
                     "missing_ingredients": best.get('missing_ingredients', []),
                     "substitutions": [],

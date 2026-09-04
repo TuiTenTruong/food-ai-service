@@ -5,12 +5,33 @@ import torch
 import uuid
 from datetime import datetime
 from PIL import Image
-from ultralytics import YOLO
 from torchvision import models, transforms
+
+
+def _configure_trusted_torch_load():
+    """
+    PyTorch 2.6+ mặc định weights_only=True khiến YOLO/ResNet checkpoint local không load được.
+    Checkpoint trong models_weights/ là file tin cậy của dự án → cho phép load đầy đủ.
+    """
+    if getattr(torch.load, "_food_ai_patched", False):
+        return
+
+    original_load = torch.load
+
+    def patched_load(*args, **kwargs):
+        kwargs.setdefault("weights_only", False)
+        return original_load(*args, **kwargs)
+
+    patched_load._food_ai_patched = True
+    torch.load = patched_load
+
 
 class VisionService:
     def __init__(self):
         print(" [Vision] Đang khởi tạo mô hình YOLOv8 và ResNet...")
+        _configure_trusted_torch_load()
+
+        from ultralytics import YOLO
         
         # Đường dẫn tuyệt đối tới thư mục chứa models
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,8 +58,9 @@ class VisionService:
 
         
         resnet_path = os.path.join(base_dir, 'models_weights', 'resnet_best.pth')
-        # Load weights (ánh xạ tự động sang CPU nếu không có GPU)
-        self.resnet_model.load_state_dict(torch.load(resnet_path, map_location=self.device))
+        self.resnet_model.load_state_dict(
+            torch.load(resnet_path, map_location=self.device, weights_only=False)
+        )
         self.resnet_model.to(self.device)
         self.resnet_model.eval()
 
