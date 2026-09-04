@@ -44,7 +44,11 @@ class RAGController:
                 "description": r.description,
                 "steps": r.steps,
                 "ingredients": [
-                    {"name": ing.name, "amount": ing.amount}
+                    {
+                        "name": ing.name,
+                        "quantity": ing.quantity,
+                        "unit": ing.unit,
+                    }
                     for ing in r.ingredients
                 ],
                 "image_url": r.image_url,
@@ -60,7 +64,8 @@ class RAGController:
         retrieved = self.retrieval_service.retrieve(
             user_ingredients=request.user_ingredients,
             recipes=recipes_dict,
-            top_k=request.top_k
+            top_k=request.top_k,
+            preferences=request.preferences
         )
         
         if not retrieved:

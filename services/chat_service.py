@@ -1,24 +1,10 @@
-import os
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain_core.prompts import PromptTemplate
+
+from .llm_client import get_llm_client
 
 load_dotenv()
 
-class CookingLangChainService:
-    def __init__(self):
-        print(" [LangChain] Đang khởi tạo AI Assistant...")
-
-        api_key = os.getenv("OPENAI_API_KEY")
-        print(" API KEY:", api_key[:10] + "..." if api_key else " NONE")
-
-        self.llm = ChatOpenAI(
-            model="gpt-4o-mini",
-            temperature=0.2
-        )
-
-        self.prompt = PromptTemplate(
-            template="""
+_RECIPE_SUGGEST_TEMPLATE = """
 Bạn là một đầu bếp.
 
 Dựa vào danh sách công thức và nguyên liệu hiện có, hãy chọn 1 món phù hợp nhất.
@@ -39,10 +25,18 @@ Tên món: <tên>
 Lý do: <ngắn gọn>
 Nguyên liệu có: <liệt kê>
 Nguyên liệu thiếu: <liệt kê>
-""",
-            input_variables=["recipes", "ingredients"]
-        )
+"""
 
+
+class CookingLangChainService:
+    def __init__(self):
+        print(" [LangChain] Đang khởi tạo AI Assistant...")
+
+        self.llm_client = get_llm_client()
+        print(
+            f" [LangChain] provider={self.llm_client.provider} "
+            f"model={self.llm_client.model}"
+        )
     def _format_recipe_chunks(self, recipe_chunks):
         if not recipe_chunks:
             return "[]"
@@ -132,22 +126,26 @@ Nguyên liệu thiếu: <liệt kê>
 
             recipes_context = self._format_recipe_chunks(recipe_chunks)
 
-            formatted_prompt = self.prompt.format(
+            formatted_prompt = _RECIPE_SUGGEST_TEMPLATE.format(
                 recipes=recipes_context,
                 ingredients=ingredients_str
             )
-
             print("\n====== PROMPT ======")
             print(formatted_prompt[:500])
             print("====================\n")
 
-            response = self.llm.invoke(formatted_prompt)
+            response = self.llm_client.chat_completions_create(
+                messages=[{"role": "user", "content": formatted_prompt}],
+                temperature=0.2,
+                max_tokens=2000,
+            )
+            raw_content = response.choices[0].message.content or ""
 
             print("\n====== RAW LLM OUTPUT ======")
-            print(response.content)
+            print(raw_content)
             print("============================\n")
 
-            parsed = self._parse_response(response.content)
+            parsed = self._parse_response(raw_content)
 
             print(" PARSED:", parsed)
 
@@ -157,7 +155,7 @@ Nguyên liệu thiếu: <liệt kê>
 
                 return {
                     "name": "Không xác định",
-                    "description": response.content,
+                    "description": raw_content,
                     "matched_ingredients": detected_ingredients,
                     "missing_ingredients": []
                 }
