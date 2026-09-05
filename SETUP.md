@@ -224,25 +224,37 @@ Kết quả mong đợi:
 
 ---
 
-## 10. Bước 8: Triển khai lên Cloud Modal GPU (Tùy chọn)
+## 10. Bước 8: Khởi chạy trên Cloud Modal GPU (Serverless - Tắt khi không sử dụng)
 
-Để triển khai serverless microservice lên GPU đám mây của Modal.com (chạy tự động co giãn, hỗ trợ GPU Nvidia T4 / A10G):
+Hệ thống hỗ trợ chạy Serverless trên GPU đám mây của Modal.com (Nvidia T4 / A10G), tự động co giãn và **chỉ tính tiền khi có request** (tự động về 0$ sau 5 phút không dùng hoặc tắt ngay khi nhấn Ctrl+C):
+
+### 10.1. Chạy Server Dev tương tác (Khuyến nghị)
+Chỉ cần chạy 1 lệnh duy nhất:
 
 ```powershell
-# 1. Cài đặt modal client
-pip install modal
-
-# 2. Xác thực tài khoản Modal
-modal setup
-
-# 3. Chạy thử nghiệm trên cloud
-modal run modal_app.py
-
-# 4. Triển khai chính thức nhận URL Web Endpoint
-modal deploy modal_app.py
+python serve_modal.py
+# Hoặc gõ trực tiếp file batch trên Windows:
+.\serve_modal.bat
+# Hoặc dùng trực tiếp lệnh Modal CLI:
+modal serve modal_app.py
 ```
 
-Sau khi deploy, Modal sẽ cung cấp URL công khai (HTTPS) để cấu hình vào ứng dụng Flutter hoặc Backend.
+- Modal sẽ tự động cấp một URL công khai dạng: `https://<workspace>--food-ai-service-fastapi-app-dev.modal.run`.
+- Bạn có thể dán URL này trực tiếp vào ứng dụng Flutter (`fe_nckh`) hoặc Backend (`be_nckh`).
+- **TẮT SERVER**: Nhấn tổ hợp phím **`Ctrl + C`** trên cửa sổ PowerShell/CMD. Container trên cloud sẽ tắt ngay lập tức, không còn chạy ngầm và không phát sinh bất kỳ chi phí nào!
+
+### 10.2. Chạy kiểm tra nhanh (Test Runner)
+```powershell
+python serve_modal.py --test
+# Hoặc:
+modal run modal_app.py
+```
+Lệnh này sẽ kết nối đến container GPU, kiểm tra mô hình YOLO26 38 classes và RAG 96 công thức, in kết quả ra màn hình rồi tự động thoát.
+
+### 10.3. Triển khai vĩnh viễn (Production Deployment)
+```powershell
+modal deploy modal_app.py
+```
 
 ---
 

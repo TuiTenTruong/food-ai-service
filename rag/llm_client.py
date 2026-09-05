@@ -46,6 +46,11 @@ class LLMClient:
             self.model = os.getenv("HUGGINGFACE_MODEL") or os.getenv("QWEN_MODEL", "Qwen/Qwen2.5-7B-Instruct")
             self.client = OpenAI(api_key=api_key or "hf-token", base_url=base_url)
 
+        elif self.provider == "ollama":
+            base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+            self.model = os.getenv("OLLAMA_CHAT_MODEL") or os.getenv("OLLAMA_RAG_MODEL", "qwen2.5")
+            self.client = OpenAI(api_key="ollama", base_url=base_url)
+
         else:
             # Fallback mock/test client
             logger.info(f"Using mock client for unknown provider '{self.provider}'")
