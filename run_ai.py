@@ -17,7 +17,7 @@ if hasattr(sys.stderr, "reconfigure"):
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
@@ -100,6 +100,19 @@ async def lifespan(app: FastAPI):
     # 3. Chatbot Service (lazy-loaded on demand when chat endpoints are called)
     app.state.chatbot = None
 
+    # 4. Pre-load Qwen 2.5 on GPU if LLM_PROVIDER=qwen
+    llm_provider = os.getenv("LLM_PROVIDER", "gemini").lower().strip()
+    if llm_provider == "qwen":
+        try:
+            logger.info("⚡ Pre-loading Qwen 2.5 - 3B onto GPU memory...")
+            from services.qwen_service import get_qwen_service
+            qwen_srv = get_qwen_service()
+            qwen_srv.load()
+            app.state.qwen_service = qwen_srv
+            logger.info(" Qwen 2.5 - 3B loaded and ready on GPU!")
+        except Exception as exc:
+            logger.warning(f"Could not pre-load Qwen at startup (will retry on request): {exc}")
+
     logger.info(" Food AI Service startup complete and ready for requests.")
 
     yield
@@ -110,6 +123,8 @@ async def lifespan(app: FastAPI):
         del app.state.detector
     if hasattr(app.state, "rag_service"):
         del app.state.rag_service
+    if hasattr(app.state, "qwen_service"):
+        del app.state.qwen_service
     logger.info(" Clean shutdown complete.")
 
 
@@ -228,6 +243,56 @@ async def send_chat_message(session_id: str, request: SendChatMessageRequest):
         raise
     except Exception as e:
         logger.error(f"[API] Send message error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/ai/chat/sessions/{session_id}/messages/stream", tags=["Chat"])
+async def stream_chat_message(session_id: str, request: SendChatMessageRequest):
+    """
+    [Giải pháp Tối ưu 2] Server-Sent Events (SSE) chat stream.
+    Truyền từng token thời gian thực về client.
+    Client nhận: `data: {"chunk": "..."}\n\n`
+    Kết thúc với: `data: [DONE]\n\n`
+    """
+    try:
+        if not request.message or not request.message.strip():
+            raise HTTPException(status_code=400, detail="message không được để trống")
+
+        chatbot = _get_chatbot_instance()
+        if not chatbot:
+            raise HTTPException(status_code=503, detail="Chatbot service is not available")
+
+        import json
+
+        def sse_event_generator():
+            try:
+                for token_chunk in chatbot.stream_chat(
+                    session_id=session_id,
+                    message=request.message.strip(),
+                    recipes=request.recipes,
+                    user_pantry=request.user_pantry
+                ):
+                    if token_chunk:
+                        payload = json.dumps({"chunk": token_chunk}, ensure_ascii=False)
+                        yield f"data: {payload}\n\n"
+                yield "data: [DONE]\n\n"
+            except Exception as e:
+                err_payload = json.dumps({"error": str(e)}, ensure_ascii=False)
+                yield f"data: {err_payload}\n\n"
+
+        return StreamingResponse(
+            sse_event_generator(),
+            media_type="text/event-stream",
+            headers={
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "X-Accel-Buffering": "no"
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[API] Stream message error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

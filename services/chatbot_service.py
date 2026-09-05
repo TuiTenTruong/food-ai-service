@@ -4,14 +4,18 @@ Sử dụng RAG để tìm kiếm công thức phù hợp và GPT để sinh câ
 """
 
 import os
+import sys
 import json
 import re
 from typing import List, Dict, Any, Optional
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 
-from .embedding_service import get_embedding_service
-from .retrieval_service import get_retrieval_service
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 from .ingredient_format import format_ingredient_amount
 from .llm_client import get_llm_client
 
@@ -80,6 +84,62 @@ Nếu công thức phù hợp, hãy trích dẫn và hướng dẫn chi tiết.
 """
 
 
+# Precomputed vocabulary for fast rule-based ingredient extraction (<1ms)
+_BASE_INGREDIENTS = [
+    # Thịt & Gia cầm
+    "thịt ba chỉ", "thịt lợn", "thịt heo", "nạc lợn", "nạc heo", "sườn non", "sườn heo", "sườn",
+    "thịt bò nạc", "thịt bò", "bắp bò", "bò", "thịt gà", "ức gà", "đùi gà", "cánh gà", "gà ta", "gà",
+    "thịt vịt", "vịt", "chim bồ câu",
+    # Hải sản
+    "tôm sú", "tôm thẻ", "tôm khô", "tôm", "mực ống", "mực trứng", "mực", "bạch tuộc",
+    "cá lóc", "cá quả", "cá chép", "cá diêu hồng", "cá hồi", "cá basa", "cá thu", "cá trắm", "cá",
+    "cua đồng", "cua biển", "cua", "nghêu", "sò", "ốc", "hến",
+    # Trứng & Đậu
+    "trứng gà", "trứng vịt", "trứng cút", "trứng",
+    "đậu hũ", "đậu phụ", "tàu hũ", "đậu que", "đậu cove", "đậu xanh", "đậu đen", "đậu đỏ", "đậu phộng", "lạc",
+    # Rau củ
+    "cà chua bi", "cà chua", "dưa leo", "dưa chuột", "cà rốt", "khoai tây", "khoai lang", "khoai môn", "củ cải trắng", "củ cải",
+    "bắp cải", "cải thảo", "cải ngọt", "cải thìa", "cải bẹ xanh", "rau muống", "rau mồng tơi", "rau đay", "rau ngót",
+    "khổ qua", "mướp đắng", "mướp hương", "mướp", "bầu", "bí xanh", "bí đao", "bí đỏ", "su su", "su hào",
+    "bông cải xanh", "súp lơ xanh", "bông cải trắng", "súp lơ trắng", "súp lơ",
+    "bắp ngô", "bắp nếp", "bắp ngọt", "ngô", "củ đậu", "củ sắn",
+    # Nấm
+    "nấm hương", "nấm rơm", "nấm kim châm", "nấm đùi gà", "nấm bào ngư", "nấm mộc nhĩ", "mộc nhĩ", "nấm",
+    # Gia vị & Rau thơm
+    "hành lá", "hành hoa", "hành tây", "hành tím", "hành khô", "tỏi", "sả", "gừng", "ớt chuông", "ớt", "chanh",
+    "ngò gai", "ngò rí", "rau mùi", "húng quế", "thì là", "lá lốt", "tía tô",
+    # Tinh bột
+    "bún tươi", "bún", "bánh phở", "phở", "miến dong", "miến", "mì tôm", "mì", "cơm nguội", "cơm", "gạo"
+]
+
+def _build_precomputed_vocab():
+    import unicodedata
+    def _strip_accents(s: str) -> str:
+        s = unicodedata.normalize("NFD", s)
+        return "".join(c for c in s if unicodedata.category(c) != "Mn").lower().strip()
+
+    try:
+        from rag.retriever import SYNONYMS
+        syn_list = SYNONYMS
+    except Exception:
+        syn_list = []
+
+    vocab = set(_BASE_INGREDIENTS)
+    for s in syn_list:
+        vocab.update(s)
+
+    sorted_terms = sorted(vocab, key=lambda x: len(x), reverse=True)
+    compiled = []
+    for term in sorted_terms:
+        norm = _strip_accents(term)
+        pat_raw = re.compile(rf"(?<!\w){re.escape(term)}(?!\w)", re.IGNORECASE)
+        pat_norm = re.compile(rf"(?<!\w){re.escape(norm)}(?!\w)", re.IGNORECASE)
+        compiled.append((term, pat_raw, pat_norm))
+    return compiled
+
+_PRECOMPUTED_VOCAB = _build_precomputed_vocab()
+
+
 class ChatbotService:
     """
     RAG-based Chatbot Service cho tư vấn nấu ăn
@@ -98,19 +158,25 @@ class ChatbotService:
         print(f" [ChatbotService] provider={self.client.provider} model={self.model}")
         self.max_tokens = int(os.getenv("CHATBOT_MAX_TOKENS", "4096"))
         self.min_recipe_chars = int(os.getenv("CHATBOT_MIN_RECIPE_CHARS", "400"))
-        self.embedding_service = get_embedding_service()
-        self.retrieval_service = get_retrieval_service()
+        self.embedding_service = None
+        self.retrieval_service = None
+        if os.getenv("USE_CHROMA_RAG", "false").lower() == "true":
+            try:
+                self.embedding_service = get_embedding_service() if get_embedding_service else None
+                self.retrieval_service = get_retrieval_service() if get_retrieval_service else None
+            except Exception as e:
+                print(f" [ChatbotService] Warning: Chroma retrieval initialization skipped: {e}")
         
         # In-memory conversation storage (for demo)
         # Production nên dùng Redis hoặc Database
         self._conversations: Dict[str, Dict] = {}
     
-    def _extract_ingredients_from_message(self, message: str) -> List[str]:
+    def _extract_ingredients_with_llm(self, message: str) -> List[str]:
         """
-        Trích xuất nguyên liệu được đề cập trong message
-        Dùng GPT để phân tích
+        [Giải pháp cũ] Trích xuất nguyên liệu được đề cập trong message bằng 1 lượt gọi LLM.
         """
         try:
+            print(" [ChatbotService] Extracting ingredients via LLM...")
             response = self.client.chat_completions_create(
                 messages=[
                     {
@@ -127,13 +193,92 @@ class ChatbotService:
             )
             
             content = response.choices[0].message.content.strip()
+            # Clean markdown code blocks
+            if "```" in content:
+                content = re.sub(r"^```(?:json)?\s*", "", content, flags=re.MULTILINE)
+                content = re.sub(r"\s*```$", "", content, flags=re.MULTILINE).strip()
             # Parse JSON
-            if content.startswith('['):
-                return json.loads(content)
+            match = re.search(r"\[.*\]", content, re.DOTALL)
+            if match:
+                return json.loads(match.group(0))
             return []
         except Exception as e:
-            print(f" [ChatbotService] Error extracting ingredients: {e}")
+            print(f" [ChatbotService] Error extracting ingredients via LLM: {e}")
             return []
+
+    def _extract_ingredients_with_rule(self, message: str) -> List[str]:
+        """
+        [Giải pháp Tối ưu 1] Trích xuất nguyên liệu bằng Rule / Dictionary Matching (<1ms).
+        So khớp trực tiếp từ điển 50+ nguyên liệu và từ đồng nghĩa trong CSDL tiếng Việt.
+        """
+        import unicodedata
+
+        def _remove_accents(s: str) -> str:
+            s = unicodedata.normalize("NFD", s)
+            return "".join(c for c in s if unicodedata.category(c) != "Mn").lower().strip()
+
+        # Các từ đơn tiếng Việt dễ bị trùng lặp âm khi bỏ dấu (ví dụ: 'Tôi' -> 'toi' trùng 'tỏi')
+        _AMBIGUOUS_WORDS = {
+            "toi", "co", "va", "thi", "lam", "mon", "gi", "an", "o",
+            "dau", "nao", "la", "cho", "minh", "nha", "con", "duoc", "khong"
+        }
+
+        msg_lower = " " + message.lower() + " "
+        msg_norm = " " + _remove_accents(message) + " "
+        has_accents = (msg_lower != msg_norm)
+
+        matched_ingredients: List[str] = []
+        matched_spans: List[tuple] = []
+
+        for term, pat_raw, pat_norm in _PRECOMPUTED_VOCAB:
+            term_norm = _remove_accents(term)
+
+            # 1. So khớp trực tiếp có dấu trước (chính xác tuyệt đối)
+            found_match = pat_raw.search(msg_lower)
+
+            # 2. So khớp không dấu an toàn (chỉ cho cụm nhiều từ hoặc từ không bị lưỡng nghĩa)
+            if not found_match:
+                is_safe = (" " in term) or (term_norm not in _AMBIGUOUS_WORDS and not has_accents)
+                if is_safe:
+                    found_match = pat_norm.search(msg_norm)
+
+            if found_match:
+                span = found_match.span()
+                overlap = any(
+                    (span[0] >= existing[0] and span[1] <= existing[1]) or
+                    (span[0] < existing[1] and span[1] > existing[0])
+                    for existing in matched_spans
+                )
+                if not overlap:
+                    matched_ingredients.append(term)
+                    matched_spans.append(span)
+
+        if matched_ingredients:
+            print(f" [ChatbotService] Rule-based extracted ingredients (<1ms): {matched_ingredients}")
+        return matched_ingredients
+
+    def _extract_ingredients(self, message: str) -> List[str]:
+        """
+        Bộ điều phối trích xuất nguyên liệu dựa trên cấu hình INGREDIENT_EXTRACTION_MODE:
+        - 'llm': Chạy theo giải pháp cũ (gọi LLM tách từ).
+        - 'rule': Chạy tối ưu bằng từ điển Python (1ms, tiết kiệm 1 lượt LLM).
+        - 'hybrid' (mặc định): Thử rule nhanh trước; nếu không có kết quả mới gọi LLM.
+        """
+        mode = os.getenv("INGREDIENT_EXTRACTION_MODE", "hybrid").lower().strip()
+
+        if mode == "llm":
+            return self._extract_ingredients_with_llm(message)
+        elif mode == "rule":
+            return self._extract_ingredients_with_rule(message)
+        else:  # hybrid
+            rule_res = self._extract_ingredients_with_rule(message)
+            if rule_res:
+                return rule_res
+            return self._extract_ingredients_with_llm(message)
+
+    def _extract_ingredients_from_message(self, message: str) -> List[str]:
+        """Alias tương thích ngược."""
+        return self._extract_ingredients(message)
     
     def _normalize_for_match(self, text: str) -> str:
         """Chuẩn hóa text để so khớp keyword (bỏ dấu, lowercase)."""
@@ -327,7 +472,7 @@ class ChatbotService:
         
         # Check if we should search recipes
         wants_recipe = self._should_search_recipes(message) or bool(user_pantry)
-        if recipes and wants_recipe:
+        if wants_recipe:
             print(" [ChatbotService] Searching recipes...")
             
             # Extract ingredients from message or use pantry
@@ -336,17 +481,34 @@ class ChatbotService:
             if ingredients:
                 print(f" [ChatbotService] Ingredients: {ingredients}")
                 
-                # Retrieve relevant recipes
-                retrieved_recipes = self.retrieval_service.retrieve(
-                    user_ingredients=ingredients,
-                    recipes=recipes,
-                    top_k=5
-                )
+                # Try retrieval service first if available
+                if self.retrieval_service and recipes:
+                    try:
+                        retrieved_recipes = self.retrieval_service.retrieve(
+                            user_ingredients=ingredients,
+                            recipes=recipes,
+                            top_k=5
+                        )
+                        self.retrieval_service.clear()
+                    except Exception as e:
+                        print(f" [ChatbotService] Retrieval error: {e}")
+                        retrieved_recipes = []
                 
-                recipe_context = self._format_recipes_for_context(retrieved_recipes)
+                # Fallback to in-memory RAG hybrid retriever (works on Modal without chromadb)
+                if not retrieved_recipes:
+                    try:
+                        from rag import get_rag_service
+                        rag = get_rag_service()
+                        retrieved_recipes = rag.retriever.retrieve(
+                            user_ingredients=ingredients,
+                            query=message,
+                            top_k=5
+                        )
+                    except Exception as e:
+                        print(f" [ChatbotService] RAG fallback retrieval error: {e}")
                 
-                # Clear index after use
-                self.retrieval_service.clear()
+                if retrieved_recipes:
+                    recipe_context = self._format_recipes_for_context(retrieved_recipes)
 
         structured_recipe = ""
         if retrieved_recipes and wants_recipe:
@@ -438,10 +600,27 @@ class ChatbotService:
                 assistant_content = structured_recipe or "Xin lỗi, tôi đang gặp sự cố kỹ thuật. Vui lòng thử lại sau."
                 used_structured_fallback = bool(structured_recipe)
         
+        # Extract structured suggested recipes from retrieved_recipes
+        suggested_recipes = []
+        for r in retrieved_recipes:
+            rec = r.get("recipe") or {}
+            suggested_recipes.append({
+                "id": rec.get("id", ""),
+                "name": rec.get("name", ""),
+                "image_url": rec.get("image_url", ""),
+                "cook_time_minutes": rec.get("cook_time_minutes", 30),
+                "difficulty": rec.get("difficulty", "medium"),
+                "servings": rec.get("servings", 2),
+                "matched_ingredients": r.get("matched_ingredients", []),
+                "missing_ingredients": r.get("missing_ingredients", []),
+                "combined_score": r.get("combined_score", 0.0),
+            })
+
         # Add assistant message
         assistant_msg = {
             'role': 'assistant',
             'content': assistant_content,
+            'suggested_recipes': suggested_recipes,
             'timestamp': datetime.now(timezone.utc).isoformat()
         }
         conversation['messages'].append(assistant_msg)
@@ -452,6 +631,7 @@ class ChatbotService:
             'session_id': session_id,
             'user_message': user_msg,
             'assistant_message': assistant_msg,
+            'suggested_recipes': suggested_recipes,
             'metadata': {
                 'recipes_searched': len(retrieved_recipes) > 0,
                 'recipes_found': len(retrieved_recipes),
@@ -463,6 +643,107 @@ class ChatbotService:
                 'used_structured_fallback': used_structured_fallback,
             }
         }
+
+    def stream_chat(
+        self,
+        session_id: str,
+        message: str,
+        recipes: Optional[List[Dict]] = None,
+        user_pantry: Optional[List[str]] = None,
+    ):
+        """
+        [Giải pháp Tối ưu 2] Streaming chat response using Server-Sent Events (SSE).
+        Yields text chunks as they are generated by LLM token-by-token.
+        Updates conversation history when complete.
+        """
+        if session_id not in self._conversations:
+            self._conversations[session_id] = {
+                'id': session_id,
+                'messages': [],
+                'created_at': datetime.now(timezone.utc).isoformat()
+            }
+
+        conversation = self._conversations[session_id]
+        user_msg = {
+            'role': 'user',
+            'content': message,
+            'timestamp': datetime.now(timezone.utc).isoformat()
+        }
+        conversation['messages'].append(user_msg)
+
+        recipe_context = ""
+        retrieved_recipes = []
+        wants_recipe = self._should_search_recipes(message) or bool(user_pantry)
+
+        if wants_recipe:
+            ingredients = user_pantry or self._extract_ingredients(message)
+            if ingredients:
+                try:
+                    from rag import get_rag_service
+                    rag = get_rag_service()
+                    retrieved_recipes = rag.retriever.retrieve(
+                        user_ingredients=ingredients,
+                        query=message,
+                        top_k=5
+                    )
+                except Exception as e:
+                    print(f" [ChatbotService] RAG retrieval error in stream: {e}")
+
+                if retrieved_recipes:
+                    recipe_context = self._format_recipes_for_context(retrieved_recipes)
+
+        gpt_messages = [
+            {"role": "system", "content": COOKING_ASSISTANT_SYSTEM_PROMPT}
+        ]
+        if wants_recipe:
+            gpt_messages.append({"role": "system", "content": RECIPE_RESPONSE_FORMAT})
+        if recipe_context:
+            gpt_messages.append({"role": "system", "content": RECIPE_CONTEXT_PROMPT.format(recipe_context=recipe_context)})
+        if user_pantry:
+            gpt_messages.append({"role": "system", "content": f"Nguyên liệu người dùng hiện có: {', '.join(user_pantry)}"})
+
+        for msg in conversation['messages'][-10:]:
+            gpt_messages.append({"role": msg['role'], "content": msg['content']})
+
+        full_chunks = []
+        try:
+            for chunk in self.client.chat_completions_stream(
+                messages=gpt_messages,
+                temperature=self.temperature,
+                max_tokens=self.max_tokens,
+            ):
+                full_chunks.append(chunk)
+                yield chunk
+        except Exception as e:
+            err_text = f"\n[Lỗi stream: {e}]"
+            full_chunks.append(err_text)
+            yield err_text
+
+        # Record assistant message in conversation
+        assistant_content = "".join(full_chunks).strip()
+        stream_suggested_recipes = []
+        for r in retrieved_recipes:
+            rec = r.get("recipe") or {}
+            stream_suggested_recipes.append({
+                "id": rec.get("id", ""),
+                "name": rec.get("name", ""),
+                "image_url": rec.get("image_url", ""),
+                "cook_time_minutes": rec.get("cook_time_minutes", 30),
+                "difficulty": rec.get("difficulty", "medium"),
+                "servings": rec.get("servings", 2),
+                "matched_ingredients": r.get("matched_ingredients", []),
+                "missing_ingredients": r.get("missing_ingredients", []),
+                "combined_score": r.get("combined_score", 0.0),
+            })
+
+        assistant_msg = {
+            'role': 'assistant',
+            'content': assistant_content,
+            'suggested_recipes': stream_suggested_recipes,
+            'timestamp': datetime.now(timezone.utc).isoformat()
+        }
+        conversation['messages'].append(assistant_msg)
+        conversation['updated_at'] = assistant_msg['timestamp']
     
     def get_conversation(self, session_id: str) -> Optional[Dict]:
         """Get conversation by session ID"""

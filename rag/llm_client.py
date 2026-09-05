@@ -40,11 +40,15 @@ class LLMClient:
             self.model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
             self.client = OpenAI(api_key=api_key or "demo-key")
 
-        elif self.provider in ("huggingface", "hf", "qwen"):
+        elif self.provider in ("huggingface", "hf"):
             api_key = os.getenv("HUGGINGFACE_API_KEY") or os.getenv("HF_TOKEN", "")
             base_url = os.getenv("HUGGINGFACE_BASE_URL", "https://api-inference.huggingface.co/v1/")
-            self.model = os.getenv("HUGGINGFACE_MODEL") or os.getenv("QWEN_MODEL", "Qwen/Qwen2.5-7B-Instruct")
+            self.model = os.getenv("HUGGINGFACE_MODEL", "Qwen/Qwen2.5-3B-Instruct")
             self.client = OpenAI(api_key=api_key or "hf-token", base_url=base_url)
+
+        elif self.provider == "qwen":
+            self.model = os.getenv("QWEN_MODEL", "Qwen/Qwen2.5-3B-Instruct")
+            self.client = None  # Uses local GPU QwenService
 
         elif self.provider == "ollama":
             base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
@@ -67,6 +71,19 @@ class LLMClient:
         response_format: Optional[Dict[str, str]] = None
     ) -> str:
         """Call LLM and return raw text string."""
+        if self.provider == "qwen":
+            messages = []
+            if system_prompt:
+                messages.append({"role": "system", "content": system_prompt})
+            messages.append({"role": "user", "content": prompt})
+            try:
+                from services.qwen_service import get_qwen_service
+                qwen = get_qwen_service()
+                return qwen.generate(messages, max_new_tokens=max_tokens, temperature=temperature)
+            except Exception as e:
+                logger.error(f"Local Qwen generation failed: {e}")
+                raise RuntimeError(f"Qwen generation failed: {e}") from e
+
         if not self.client:
             return "{}"
 

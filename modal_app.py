@@ -34,6 +34,8 @@ image = (
         "requests>=2.31.0",
         "httpx>=0.27.0",
         "openai>=1.12.0",
+        "transformers>=4.45.0",
+        "accelerate>=0.30.0",
         "sqlalchemy>=2.0.0",
         "pymysql>=1.1.0",
     )
@@ -47,11 +49,15 @@ image = (
     .add_local_file("run_ai.py", remote_path="/root/food-ai-service/run_ai.py")
 )
 
-# 3. Cấu hình GPU (Mặc định Nvidia T4: tiết kiệm chi phí, suy luận < 20ms)
+# 2.1. Bộ nhớ đệm lưu trữ trọng số Hugging Face (Qwen 2.5 - 3B) - Không tải lại 6GB mỗi lần khởi động
+hf_cache_volume = modal.Volume.from_name("food-ai-hf-cache", create_if_missing=True)
+
+# 3. Cấu hình GPU (Mặc định Nvidia T4: 16GB VRAM, suy luận < 20ms)
 gpu_spec = os.environ.get("MODAL_GPU", "T4")
 selected_gpu = gpu_spec if gpu_spec and gpu_spec != "None" else None
 
-scaledown_window = int(os.environ.get("MODAL_SCALEDOWN_WINDOW", 300))
+# Giữ ấm đúng 15 phút (900s) theo yêu cầu - Sau 15 phút không có request tự động tắt về 0$ chi phí
+scaledown_window = int(os.environ.get("MODAL_SCALEDOWN_WINDOW", 900))
 timeout_seconds = int(os.environ.get("MODAL_TIMEOUT", 600))
 
 
@@ -60,13 +66,14 @@ timeout_seconds = int(os.environ.get("MODAL_TIMEOUT", 600))
     image=image,
     gpu=selected_gpu,
     timeout=timeout_seconds,
-    scaledown_window=scaledown_window,  # Tự động tắt container sau 5 phút không có request -> 0$ chi phí
+    scaledown_window=scaledown_window,  # Giữ ấm 15 phút sau request cuối
+    volumes={"/root/.cache/huggingface": hf_cache_volume},
 )
 @modal.asgi_app()
 def fastapi_app():
     """
     Khởi chạy ứng dụng FastAPI trên Modal dưới dạng Serverless ASGI app.
-    Tải mô hình nhận dạng (YOLO26 / RT-DETR / RF-DETR) và RAG vào bộ nhớ GPU một lần khi container khởi động.
+    Tải mô hình nhận dạng (YOLO26) và Qwen 2.5 - 3B vào bộ nhớ GPU một lần khi container khởi động.
     """
     import sys
     os.environ["YOLO_CONFIG_DIR"] = "/tmp/Ultralytics"
@@ -84,7 +91,8 @@ def fastapi_app():
 @app.function(
     image=image,
     gpu=selected_gpu,
-    timeout=180,
+    timeout=timeout_seconds,
+    volumes={"/root/.cache/huggingface": hf_cache_volume},
 )
 def test_inference():
     """Kiểm tra mô hình nhận dạng và RAG trên Modal container."""

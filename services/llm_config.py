@@ -9,14 +9,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-VALID_PROVIDERS = ("openai", "gemini", "qwen", "ollama")
+VALID_PROVIDERS = ("openai", "gemini", "qwen", "ollama", "huggingface", "hf")
 
 
 @dataclass(frozen=True)
 class LLMSettings:
     provider: str
     model: str
-    # OpenAI / Ollama (OpenAI-compatible)
+    # OpenAI / Ollama / HuggingFace (OpenAI-compatible)
     api_key: str = ""
     base_url: str | None = None
     # Qwen fine-tune (Modal HTTP)
@@ -27,11 +27,11 @@ def resolve_llm_provider() -> str:
     """
     Ưu tiên LLM_PROVIDER; tương thích USE_OLLAMA và MODAL_CHAT_URL cũ.
 
-    LLM_PROVIDER=openai | gemini | qwen | ollama
+    LLM_PROVIDER=openai | gemini | qwen | ollama | huggingface
     """
     explicit = os.getenv("LLM_PROVIDER", "").strip().lower()
     if explicit in VALID_PROVIDERS:
-        return explicit
+        return "huggingface" if explicit == "hf" else explicit
 
     if os.getenv("USE_OLLAMA", "false").lower() == "true":
         return "ollama"
@@ -57,6 +57,18 @@ def get_llm_settings() -> LLMSettings:
             base_url=base_url.rstrip("/") + "/",
         )
 
+    if provider in ("huggingface", "hf"):
+        base_url = os.getenv(
+            "HUGGINGFACE_BASE_URL",
+            "https://api-inference.huggingface.co/v1/",
+        ).strip()
+        return LLMSettings(
+            provider="huggingface",
+            model=os.getenv("HUGGINGFACE_MODEL", "Qwen/Qwen2.5-7B-Instruct"),
+            api_key=os.getenv("HUGGINGFACE_API_KEY", os.getenv("HF_TOKEN", "")),
+            base_url=base_url.rstrip("/") + "/",
+        )
+
     if provider == "ollama":
         return LLMSettings(
             provider="ollama",
@@ -72,7 +84,7 @@ def get_llm_settings() -> LLMSettings:
         )
         return LLMSettings(
             provider="qwen",
-            model=os.getenv("QWEN_MODEL", "nckh-qwen3-4b-lora"),
+            model=os.getenv("QWEN_MODEL", "Qwen/Qwen2.5-3B-Instruct"),
             qwen_api_url=url.rstrip("/"),
         )
 
