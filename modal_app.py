@@ -69,6 +69,7 @@ def fastapi_app():
     Tải mô hình nhận dạng (YOLO26 / RT-DETR / RF-DETR) và RAG vào bộ nhớ GPU một lần khi container khởi động.
     """
     import sys
+    os.environ["YOLO_CONFIG_DIR"] = "/tmp/Ultralytics"
     sys.path.insert(0, "/root/food-ai-service")
     os.chdir("/root/food-ai-service")
 
@@ -88,6 +89,7 @@ def fastapi_app():
 def test_inference():
     """Kiểm tra mô hình nhận dạng và RAG trên Modal container."""
     import sys
+    os.environ["YOLO_CONFIG_DIR"] = "/tmp/Ultralytics"
     sys.path.insert(0, "/root/food-ai-service")
     os.chdir("/root/food-ai-service")
 
